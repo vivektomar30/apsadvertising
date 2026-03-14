@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Gallery - APS Advertising</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* WhatsApp Floating Icon - Official Style */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            z-index: 10000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: floatWhatsApp 3s ease-in-out infinite;
+            filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes floatWhatsApp {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+        }
+
+        @media (max-width: 576px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .demo-hero {
+                padding: 60px 5% 40px !important;
+                /* Override desktop padding */
+            }
+
+            .demo-hero h1 {
+                font-size: 2.2rem !important;
+            }
+        }
+
+        :root {
+            --primary-red: #D2042D;
+            --accent-red: #FF0033;
+            --primary-black: #000000;
+            --dark-grey: #0A0A0A;
+            --medium-grey: #1A1A1A;
+            --light-grey: #333333;
+            --off-white: #F5F5F5;
+            --pure-white: #FFFFFF;
+            --gradient-dark: linear-gradient(135deg, #000000 0%, #0A0A0A 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header - Clean Black Design */
+        .demo-header {
+            background: var(--primary-black);
+            padding: 20px 5%;
+            border-bottom: 2px solid var(--primary-red);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-red);
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--pure-white);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo-text span {
+            color: var(--primary-red);
+        }
+
+        .back-btn {
+            background: var(--primary-red);
+            color: white;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            background: var(--accent-red);
+        }
+
+        /* Hero Section - Clean Black */
+        .demo-hero {
+            padding: 100px 5% 60px;
+            text-align: center;
+            background: var(--primary-black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-hero h1 {
+            font-size: 4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            margin-bottom: 25px;
+            color: var(--pure-white);
+        }
+
+        .demo-hero h1 span {
+            color: var(--primary-red);
+        }
+
+        .demo-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: var(--off-white);
+            line-height: 1.8;
+        }
+
+        /* Enhanced Search Section - Clean Design */
+        .search-section {
+            max-width: 1400px;
+            margin: 0 auto 50px;
+            padding: 0 5%;
+        }
+
+        .search-container {
+            background: var(--dark-grey);
+            border-radius: 25px;
+            padding: 50px;
+            border: 1px solid var(--light-grey);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .search-title {
+            font-size: 2.5rem;
+            color: var(--pure-white);
+            margin-bottom: 35px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        /* Enhanced Search Box */
+        .search-box {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            align-items: center;
+        }
+
+        .search-input-container {
+            flex: 1;
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-red);
+            font-size: 1.3rem;
+            z-index: 1;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 20px 30px 20px 60px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--light-grey);
+            border-radius: 35px;
+            color: var(--pure-white);
+            font-size: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .search-btn {
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            padding: 20px 35px;
+            border-radius: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            white-space: nowrap;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-3px);
+            background: var(--accent-red);
+        }
+
+        /* Category Selector (Like Pexels) - Clean Design */
+        .category-selector {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .category-label {
+            font-size: 1.2rem;
+            color: var(--pure-white);
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .category-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--pure-white);
+            padding: 14px 30px;
+            border: 1px solid var(--light-grey);
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .category-btn.active {
+            background: var(--primary-red);
+            border-color: var(--primary-red);
+        }
+
+        .category-btn:hover:not(.active) {
+            background: rgba(210, 4, 45, 0.1);
+            border-color: var(--primary-red);
+            transform: translateY(-2px);
+        }
+
+        /* Search Tags - Clean Design */
+        .search-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .search-tag {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--pure-white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid var(--light-grey);
+            font-weight: 600;
+        }
+
+        .search-tag:hover {
+            background: var(--primary-red);
+            transform: translateY(-3px);
+            border-color: var(--primary-red);
+        }
+
+        /* Main Content */
+        .demo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5% 120px;
+        }
+
+        /* Results Header */
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        .results-title {
+            font-size: 2.2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: var(--pure-white);
+            position: relative;
+        }
+
+        .results-count {
+            font-size: 1.2rem;
+            color: var(--primary-red);
+            font-weight: 700;
+            background: rgba(210, 4, 45, 0.1);
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(210, 4, 45, 0.3);
+        }
+
+        /* Smart Results Notice - Clean Design */
+        .smart-results-notice {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .notice-icon {
+            color: var(--primary-red);
+            font-size: 1.5rem;
+        }
+
+        .notice-text {
+            font-size: 1.1rem;
+            color: var(--off-white);
+            flex: 1;
+        }
+
+        /* Demo Grid */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        /* Video Card - Clean Design */
+        .video-card {
+            background: var(--dark-grey);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid var(--light-grey);
+            position: relative;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-red);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .match-indicator {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        /* Video on TOP */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            cursor: pointer;
+            background: #000;
+        }
+
+        .video-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .video-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .video-wrapper:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-btn {
+            background: var(--primary-red);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+            background: var(--accent-red);
+        }
+
+        /* Content on BOTTOM */
+        .video-info {
+            padding: 30px;
+        }
+
+        .video-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.3;
+        }
+
+        .video-description {
+            color: var(--off-white);
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .video-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: rgba(210, 4, 45, 0.1);
+            color: var(--primary-red);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 1px solid rgba(210, 4, 45, 0.3);
+        }
+
+        .video-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 14px 25px;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .play-now-btn {
+            background: var(--primary-red);
+            color: white;
+            border: none;
+        }
+
+        .play-now-btn:hover {
+            transform: translateY(-3px);
+            background: var(--accent-red);
+        }
+
+        .book-now-btn {
+            background: transparent;
+            color: var(--primary-red);
+            border: 2px solid var(--primary-red);
+        }
+
+        .book-now-btn:hover {
+            background: var(--primary-red);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Audio Card - Clean Design */
+        .audio-card {
+            background: var(--dark-grey);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            border: 1px solid var(--light-grey);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .audio-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-red);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .audio-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .audio-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-red);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .audio-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .audio-desc {
+            color: var(--off-white);
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        .audio-player-container {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--light-grey);
+        }
+
+        .audio-player {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .audio-player::-webkit-media-controls-panel {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .audio-player::-webkit-media-controls-play-button {
+            background-color: var(--primary-red);
+            border-radius: 50%;
+        }
+
+        /* Voice Type Badge */
+        .voice-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            border: 1px solid;
+        }
+
+        .male-badge {
+            background: rgba(33, 150, 243, 0.1);
+            color: #2196F3;
+            border-color: #2196F3;
+        }
+
+        .female-badge {
+            background: rgba(233, 30, 99, 0.1);
+            color: #E91E63;
+            border-color: #E91E63;
+        }
+
+        .dual-badge {
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        /* Contact Section - Clean Design */
+        .contact-section {
+            background: var(--dark-grey);
+            border-radius: 25px;
+            padding: 60px;
+            margin-top: 100px;
+            border: 1px solid var(--light-grey);
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 2.8rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            margin-bottom: 25px;
+            color: var(--pure-white);
+        }
+
+        .contact-desc {
+            font-size: 1.3rem;
+            color: var(--off-white);
+            opacity: 0.9;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: var(--primary-red);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: none;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-5px);
+            background: var(--accent-red);
+        }
+
+        /* Smart Results Section */
+        .results-section {
+            margin-top: 60px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 70px;
+            color: var(--off-white);
+            font-size: 1.3rem;
+            grid-column: 1 / -1;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid var(--light-grey);
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            color: var(--primary-red);
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        /* Simple Modal - Clean Design */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            width: 95%;
+            max-width: 1000px;
+            position: relative;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--primary-red);
+        }
+
+        .modal-video {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg) scale(1.1);
+            background: var(--accent-red);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .demo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .demo-hero h1 {
+                font-size: 3rem;
+            }
+
+            .search-title {
+                font-size: 2rem;
+            }
+
+            .modal-video {
+                height: 450px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .demo-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .search-input,
+            .search-btn {
+                width: 100%;
+            }
+
+            .category-selector {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .video-wrapper {
+                height: 250px;
+            }
+
+            .video-info {
+                padding: 25px;
+            }
+
+            .video-actions {
+                flex-direction: column;
+            }
+
+            .modal-video {
+                height: 350px;
+            }
+
+            .search-container {
+                padding: 35px;
+            }
+
+            .contact-section {
+                padding: 40px;
+            }
+
+            .audio-card {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .demo-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .demo-hero p {
+                font-size: 1.1rem;
+            }
+
+            .search-container {
+                padding: 25px;
+            }
+
+            .contact-section {
+                padding: 30px;
+            }
+
+            .contact-title {
+                font-size: 2rem;
+            }
+
+            .audio-card {
+                padding: 20px;
+            }
+
+            .modal-video {
+                height: 280px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-text {
+                font-size: 1.8rem;
+            }
+
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="demo-header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <img src="img/APS Advertising Logo (1).png" alt="APS Advertising Logo" class="logo-img">
+                <div class="logo-text">APS <span>Advertising</span></div>
+            </a>
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="demo-hero">
+        <h1>Our Creative <span>Portfolio</span></h1>
+        <p>Explore our collection of professional video and audio advertisements. Click on any video to play it full
+            screen.</p>
+    </section>
+
+    <!-- Enhanced Search Section -->
+    <div class="search-section">
+        <div class="search-container">
+            <h2 class="search-title">Find Your Perfect Advertisement</h2>
+
+            <!-- Enhanced Search Box -->
+            <div class="search-box">
+                <div class="search-input-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="searchInput"
+                        placeholder="Search festival ads, business ads, voice recording...">
+                </div>
+                <button class="search-btn" onclick="smartSearch()">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+
+            <!-- Category Selector (Like Pexels) -->
+            <div class="category-selector">
+                <div class="category-label">
+                    <i class="fas fa-filter"></i> Filter by:
+                </div>
+                <button class="category-btn active" onclick="selectCategory('all')">
+                    <i class="fas fa-globe"></i> All
+                </button>
+                <button class="category-btn" onclick="selectCategory('video')">
+                    <i class="fas fa-video"></i> Video Ads
+                </button>
+                <button class="category-btn" onclick="selectCategory('audio')">
+                    <i class="fas fa-microphone-alt"></i> Audio Ads
+                </button>
+                <button class="category-btn" onclick="selectCategory('male')">
+                    <i class="fas fa-male"></i> Male Voice
+                </button>
+                <button class="category-btn" onclick="selectCategory('female')">
+                    <i class="fas fa-female"></i> Female Voice
+                </button>
+                <button class="category-btn" onclick="selectCategory('dual')">
+                    <i class="fas fa-users"></i> Dual Voice
+                </button>
+            </div>
+
+            <!-- Popular Search Tags -->
+            <div class="search-tags">
+                <span class="search-tag" onclick="searchByTag('festival')">Festival Ads</span>
+                <span class="search-tag" onclick="searchByTag('business')">Business Ads</span>
+                <span class="search-tag" onclick="searchByTag('shop')">Shop Ads</span>
+                <span class="search-tag" onclick="searchByTag('healthcare')">Healthcare</span>
+                <span class="search-tag" onclick="searchByTag('restaurant')">Restaurant</span>
+                <span class="search-tag" onclick="searchByTag('electronics')">Electronics</span>
+                <span class="search-tag" onclick="searchByTag('retail')">Retail</span>
+                <span class="search-tag" onclick="searchByTag('food')">Food</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="demo-container">
+        <!-- Smart Results Section -->
+        <div class="results-section" id="searchResults">
+            <div class="results-header">
+                <h2 class="results-title" id="resultsTitle">All Advertisements</h2>
+                <div class="results-count" id="resultsCount"></div>
+            </div>
+
+            <!-- Smart Results Notice -->
+            <div class="smart-results-notice" id="smartNotice" style="display: none;">
+                <div class="notice-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="notice-text" id="noticeText">
+                    Showing exact matches first, followed by related advertisements. We'll never leave you with empty
+                    results!
+                </div>
+            </div>
+
+            <!-- Demo Grid -->
+            <div class="demo-grid" id="resultsGrid">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2 class="contact-title">Ready to Create Your Advertisement?</h2>
+            <p class="contact-desc">
+                Contact us today to discuss your advertising needs. We'll create custom ads that perfectly represent
+                your business.
+            </p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/917355576785" class="contact-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Now
+                </a>
+                <a href="tel:7355576785" class="contact-btn">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <a href="mailto:apsadvertisingpr@gmail.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i> Email Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeVideoModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <iframe class="modal-video" id="modalVideo" src="" title="Video Player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        // Comprehensive Database with related terms
+        const videoDemos = [
+            {
+                id: 1,
+                title: "Diwali Festival Advertisement",
+                description: "Beautiful Diwali festival advertisement showcasing festive spirit, lights, and celebrations.",
+                videoUrl: "https://www.youtube.com/embed/F0QtJ8HylfI",
+                type: "youtube",
+                tags: ["Festival", "Diwali", "Celebration", "Lights", "Holiday", "Culture"],
+                category: "festival",
+                relatedTerms: ["holiday", "celebration", "lights", "culture", "tradition", "festive"]
+            },
+            {
+                id: 2,
+                title: "Business Promotion Video",
+                description: "Professional business advertisement showcasing company services and brand value.",
+                videoUrl: "https://www.youtube.com/embed/kjkjgT7A284",
+                type: "youtube",
+                tags: ["Business", "Corporate", "Professional", "Services", "Brand", "Company"],
+                category: "business",
+                relatedTerms: ["corporate", "services", "brand", "company", "office", "enterprise"]
+            },
+            {
+                id: 3,
+                title: "E-commerce Shopping Experience",
+                description: "Modern e-commerce advertisement showcasing online shopping experience.",
+                videoUrl: "https://www.youtube.com/embed/_HXDGxKkrZk",
+                type: "youtube",
+                tags: ["E-commerce", "Online", "Shopping", "Store", "Retail", "Digital"],
+                category: "ecommerce",
+                relatedTerms: ["online shopping", "digital store", "web store", "buy", "purchase", "market"]
+            },
+            {
+                id: 4,
+                title: "Professional Voice-Over Announcement",
+                description: "Professional voice-over announcement advertisement for radio and digital platforms.",
+                videoUrl: "https://www.youtube.com/embed/CrCfH5-qQ9s",
+                type: "youtube",
+                tags: ["Voice", "Announcement", "Radio", "Audio", "Recording", "Professional"],
+                category: "voice",
+                relatedTerms: ["audio", "recording", "speaker", "announcer", "broadcast", "sound"]
+            }
+        ];
+
+        // Audio Data - All your files with expanded related terms
+        const audioDemos = [
+            // Male Voice Demos
+            {
+                id: 101,
+                title: "M BANK CSC Services",
+                description: "Professional male voice recording for bank CSC services.",
+                audioUrl: "public/male/M BANK CSC ।। APS ADVERTISING 7355576785.mp3",
+                tags: ["Male Voice", "Bank", "CSC", "Professional", "Financial", "Services"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["finance", "banking", "service center", "customer service", "financial services", "money"]
+            },
+            {
+                id: 102,
+                title: "Indian Oil Pipeline Advertisement",
+                description: "Authoritative male voice for oil pipeline advertisement.",
+                audioUrl: "public/male/Indian Oil Pipeline APS Advertising 7355576785.mp3",
+                tags: ["Male Voice", "Oil", "Pipeline", "Industry", "Energy", "Petroleum"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["petroleum", "energy", "fuel", "gas", "industry", "manufacturing"]
+            },
+            {
+                id: 103,
+                title: "Vedhanshi Optical Shop",
+                description: "Clear male voice for optical shop advertisement.",
+                audioUrl: "public/male/(S) Vedhanshi Chasma Ghar (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Optical", "Shop", "Clear", "Eyewear", "Glasses"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["eyewear", "glasses", "spectacles", "vision", "eye care", "optical shop"]
+            },
+            {
+                id: 104,
+                title: "Netra Eye Camp",
+                description: "Professional male voice for eye camp advertisement.",
+                audioUrl: "public/male/(S) Netra Camp New ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Eye Camp", "Health", "Campaign", "Medical", "Healthcare"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["eye care", "medical camp", "health camp", "vision care", "ophthalmology", "eye treatment"]
+            },
+            {
+                id: 105,
+                title: "Medical Health Camp",
+                description: "Medical health camp announcement in male voice.",
+                audioUrl: "public/male/(S) Health Camp (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Health", "Medical", "Camp", "Healthcare", "Treatment"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["medical", "treatment", "clinic", "hospital", "doctor", "medicine"]
+            },
+            {
+                id: 106,
+                title: "Anubhav Electronic Shop Conversation",
+                description: "Dual voice conversation for electronic shop.",
+                audioUrl: "public/male/(MF)New Anubhav Electronic Shop ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Dual Voice", "Electronics", "Shop", "Conversation", "Appliances", "Gadgets"],
+                category: "dual",
+                voiceType: "dual",
+                relatedTerms: ["appliances", "gadgets", "devices", "electronics store", "tech shop", "home appliances"]
+            },
+            {
+                id: 107,
+                title: "Vedhanshi Optical Camp",
+                description: "Male voice for optical camp advertisement.",
+                audioUrl: "public/male/(M)Vedhanshi Chasma Camp (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Optical", "Camp", "Eye Care", "Eyewear", "Vision"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["eye test", "vision test", "eyeglasses", "contact lenses", "optical center", "eye specialist"]
+            },
+            {
+                id: 108,
+                title: "Urwa Supermarket",
+                description: "Male voice for supermarket advertisement.",
+                audioUrl: "public/male/(M)Urwa Mart ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Supermarket", "Grocery", "Retail", "Store", "Shopping"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["grocery store", "mart", "shopping", "retail store", "supermarket", "food store"]
+            },
+            {
+                id: 109,
+                title: "Rajma Chawal Restaurant",
+                description: "Food restaurant advertisement in male voice.",
+                audioUrl: "public/male/(M)Rajma Chawal (Aps Advertisement Studio 🎙️🎶 7355576785).mp3",
+                tags: ["Male Voice", "Food", "Restaurant", "Dining", "Cuisine", "Meal"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["restaurant", "dining", "food joint", "eatery", "cafe", "meal"]
+            },
+            {
+                id: 110,
+                title: "NV Orissa Retail Shop",
+                description: "Retail shop advertisement in male voice.",
+                audioUrl: "public/male/(M)Nv Orissa (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Retail", "Shop", "Orissa", "Store", "Business"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["retail", "store", "shop", "business", "outlet", "showroom"]
+            },
+            {
+                id: 111,
+                title: "NV Giridh Shop",
+                description: "Shop advertisement in male voice.",
+                audioUrl: "public/male/(M)Nv Giridh(APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Shop", "Retail", "Business", "Store", "Local"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["local shop", "business", "store", "retail outlet", "shopkeeper", "merchant"]
+            },
+            {
+                id: 112,
+                title: "NV Agra Business",
+                description: "Retail business advertisement in male voice.",
+                audioUrl: "public/male/(M)Nv Agra (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Retail", "Agra", "Business", "Shop", "Store"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["business", "enterprise", "commercial", "trading", "merchant", "vendor"]
+            },
+            {
+                id: 113,
+                title: "Bhole Aata Chakki",
+                description: "Food product advertisement in male voice.",
+                audioUrl: "public/male/(M)Bhole Aata Chakki ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Food", "Product", "Chakki", "Flour", "Grocery"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["flour", "wheat", "food product", "grocery item", "kitchen product", "food item"]
+            },
+            {
+                id: 114,
+                title: "Shivay Hospital Medical Services",
+                description: "Medical hospital advertisement in male voice.",
+                audioUrl: "public/male/(M) Shivay Hospital 🏥 (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Hospital", "Medical", "Healthcare", "Treatment", "Clinic"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["hospital", "clinic", "medical center", "healthcare", "treatment center", "medical facility"]
+            },
+            {
+                id: 115,
+                title: "NV Yuvika Shop",
+                description: "Shop advertisement in male voice.",
+                audioUrl: "public/male/(M) Nv Yuvika( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Shop", "Retail", "Yuvika", "Store", "Business"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["shop", "store", "retail", "business", "outlet", "emporium"]
+            },
+            {
+                id: 116,
+                title: "NV Shoppe Pumato Grocery",
+                description: "Grocery shop advertisement in male voice.",
+                audioUrl: "public/male/(M) Nv Shoppe Pumato (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Grocery", "Shop", "Pumato", "Supermarket", "Food"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["grocery", "food store", "supermarket", "provisions", "kitchen items", "food products"]
+            },
+            {
+                id: 117,
+                title: "NV SG Supermarket",
+                description: "Supermarket advertisement in male voice.",
+                audioUrl: "public/male/(M) Nv Sg Mart (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Supermarket", "Mart", "Grocery", "Store", "Retail"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["supermarket", "mart", "grocery store", "retail store", "shopping mart", "food market"]
+            },
+            {
+                id: 118,
+                title: "NV Rajasthan Shop",
+                description: "Shop advertisement with Rajasthani touch.",
+                audioUrl: "public/male/(M) Nv Rajasthan (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Shop", "Rajasthan", "Retail", "Cultural", "Local"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["Rajasthan", "cultural", "traditional", "local shop", "regional", "heritage"]
+            },
+            {
+                id: 119,
+                title: "NV Jhunjhunu Local Shop",
+                description: "Local shop advertisement in male voice.",
+                audioUrl: "public/male/(M) Nv Jhunjhunu (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Shop", "Jhunjhunu", "Local", "Retail", "Business"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["Jhunjhunu", "local", "regional", "area shop", "neighborhood", "community"]
+            },
+            {
+                id: 120,
+                title: "NV Bengali Style Shop",
+                description: "Bengali style shop advertisement.",
+                audioUrl: "public/male/(M) Nv Bengali (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Male Voice", "Shop", "Bengali", "Culture", "Regional", "Traditional"],
+                category: "male",
+                voiceType: "male",
+                relatedTerms: ["Bengali", "culture", "traditional", "regional", "east india", "cultural shop"]
+            },
+
+            // Female Voice Demos
+            {
+                id: 201,
+                title: "Dildaar Malik Business Promotion",
+                description: "Female voice advertisement for business promotion.",
+                audioUrl: "public/female/(MF) Dildaar Malik (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Female Voice", "Business", "Promotion", "Professional", "Enterprise", "Company"],
+                category: "female",
+                voiceType: "female",
+                relatedTerms: ["business promotion", "enterprise", "company", "professional", "commercial", "corporate"]
+            },
+            {
+                id: 202,
+                title: "Fashion Point Boutique",
+                description: "Female voice for fashion boutique advertisement.",
+                audioUrl: "public/female/(MF) Fashion Point (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Female Voice", "Fashion", "Boutique", "Style", "Clothing", "Apparel"],
+                category: "female",
+                voiceType: "female",
+                relatedTerms: ["fashion", "clothing", "apparel", "boutique", "style", "garments"]
+            },
+            {
+                id: 203,
+                title: "Mahindra Vehicle Promotion",
+                description: "Female voice for Mahindra vehicle advertisement.",
+                audioUrl: "public/female/(MF) Mahindra (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Female Voice", "Mahindra", "Vehicle", "Automotive", "Car", "Transport"],
+                category: "female",
+                voiceType: "female",
+                relatedTerms: ["vehicle", "car", "automobile", "transport", "auto", "motor vehicle"]
+            },
+            {
+                id: 204,
+                title: "Chhath Pooja Festival",
+                description: "Female voice for festival advertisement.",
+                audioUrl: "public/female/(MF)Chhath Pooja (APS ADVERTISEMENT STUDIO 🎙️ 7355576785)-1.mp3",
+                tags: ["Female Voice", "Festival", "Chhath", "Pooja", "Celebration", "Cultural"],
+                category: "female",
+                voiceType: "female",
+                relatedTerms: ["festival", "celebration", "cultural", "religious", "tradition", "ceremony"]
+            },
+            {
+                id: 205,
+                title: "Hakeem Healthcare Services",
+                description: "Female voice for healthcare advertisement.",
+                audioUrl: "public/female/(MF)Hakeem Healthcare (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Female Voice", "Healthcare", "Medical", "Hakeem", "Treatment", "Wellness"],
+                category: "female",
+                voiceType: "female",
+                relatedTerms: ["healthcare", "medical", "treatment", "wellness", "health services", "medical care"]
+            },
+            {
+                id: 206,
+                title: "Sushila Bazar Market",
+                description: "Female voice for market advertisement.",
+                audioUrl: "public/female/(MF)Sushila Bazar New (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["Female Voice", "Market", "Bazar", "Shopping", "Retail", "Commercial"],
+                category: "female",
+                voiceType: "female",
+                relatedTerms: ["market", "bazar", "shopping", "commercial", "retail market", "shopping area"]
+            }
+        ];
+
+        // Global variables
+        let currentCategory = 'all';
+        let allItems = [...videoDemos, ...audioDemos];
+
+        // Category to keyword mapping
+        const categoryKeywords = {
+            'all': '',
+            'video': 'video advertisement',
+            'audio': 'audio recording',
+            'male': 'male voice',
+            'female': 'female voice',
+            'dual': 'dual voice'
+        };
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            loadAllItems();
+            setupSearch();
+            setupCategorySelector();
+
+            // Add enter key support
+            document.getElementById('searchInput').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    smartSearch();
+                }
+            });
+        });
+
+        // Load all items initially
+        function loadAllItems() {
+            const resultsGrid = document.getElementById('resultsGrid');
+            resultsGrid.innerHTML = '';
+
+            allItems.forEach(item => {
+                const card = createCard(item, false);
+                resultsGrid.appendChild(card);
+            });
+
+            updateResultsCount(allItems.length);
+            document.getElementById('resultsTitle').textContent = 'All Advertisements';
+            hideSmartNotice();
+        }
+
+        // Smart Search Function
+        function smartSearch() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            const resultsGrid = document.getElementById('resultsGrid');
+
+            if (searchTerm === '') {
+                loadAllItems();
+                return;
+            }
+
+            let searchWords = searchTerm.split(' ').filter(word => word.length > 0);
+
+            // Filter items based on current category
+            let filteredItems = allItems.filter(item => {
+                if (currentCategory === 'all') return true;
+                if (currentCategory === 'video') return videoDemos.includes(item);
+                if (currentCategory === 'audio') return audioDemos.includes(item);
+                if (currentCategory === 'male') return item.voiceType === 'male';
+                if (currentCategory === 'female') return item.voiceType === 'female';
+                if (currentCategory === 'dual') return item.voiceType === 'dual';
+                return true;
+            });
+
+            // Calculate relevance scores
+            const scoredItems = filteredItems.map(item => {
+                let score = 0;
+                let exactMatch = false;
+
+                // Combine all searchable text
+                const searchableText = [
+                    item.title,
+                    item.description,
+                    ...item.tags,
+                    ...(item.relatedTerms || []),
+                    item.voiceType || '',
+                    item.category || ''
+                ].join(' ').toLowerCase();
+
+                // Check for exact matches
+                searchWords.forEach(word => {
+                    if (searchableText.includes(word)) {
+                        score += 5; // Exact word match
+
+                        // Check for exact phrase match
+                        if (item.title.toLowerCase().includes(searchTerm) ||
+                            item.description.toLowerCase().includes(searchTerm)) {
+                            score += 20;
+                            exactMatch = true;
+                        }
+
+                        // Check in title
+                        if (item.title.toLowerCase().includes(word)) {
+                            score += 10;
+                        }
+
+                        // Check in description
+                        if (item.description.toLowerCase().includes(word)) {
+                            score += 3;
+                        }
+
+                        // Check in tags
+                        if (item.tags.some(tag => tag.toLowerCase().includes(word))) {
+                            score += 5;
+                        }
+                    }
+                });
+
+                return { item, score, exactMatch };
+            });
+
+            // Filter out items with score > 0
+            let relevantItems = scoredItems.filter(item => item.score > 0);
+
+            if (relevantItems.length === 0) {
+                // If no direct matches, show related items
+                relevantItems = findRelatedItems(searchTerm, filteredItems);
+            }
+
+            // Sort by score (highest first)
+            relevantItems.sort((a, b) => b.score - a.score);
+
+            // Update UI
+            resultsGrid.innerHTML = '';
+
+            if (relevantItems.length > 0) {
+                // Show smart notice
+                const notice = document.getElementById('smartNotice');
+                const noticeText = document.getElementById('noticeText');
+
+                if (relevantItems.some(item => item.exactMatch)) {
+                    noticeText.textContent = `Showing exact matches for "${searchTerm}" first, followed by related advertisements.`;
+                } else {
+                    noticeText.textContent = `No exact matches found for "${searchTerm}". Showing related advertisements instead.`;
+                }
+                notice.style.display = 'flex';
+
+                // Add items to grid
+                relevantItems.forEach((scoredItem, index) => {
+                    const card = createCard(scoredItem.item, scoredItem.exactMatch);
+                    resultsGrid.appendChild(card);
+                });
+
+                updateResultsCount(relevantItems.length);
+                document.getElementById('resultsTitle').textContent = `Search Results for "${searchTerm}"`;
+            } else {
+                // Show all items as fallback
+                loadAllItems();
+                showFallbackMessage(searchTerm);
+            }
+        }
+
+        // Find related items when no direct matches
+        function findRelatedItems(searchTerm, items) {
+            const relatedCategories = {
+                // Clothing shop related items
+                'cloth': ['fashion', 'boutique', 'apparel', 'garments', 'clothing'],
+                'clothes': ['fashion', 'boutique', 'apparel', 'garments', 'clothing'],
+                'fabric': ['fashion', 'boutique', 'apparel', 'garments'],
+                'garment': ['fashion', 'boutique', 'apparel', 'clothing'],
+
+                // Shop related items
+                'shop': ['store', 'retail', 'business', 'market', 'outlet'],
+                'store': ['shop', 'retail', 'business', 'market', 'outlet'],
+                'market': ['shop', 'store', 'retail', 'business'],
+                'mall': ['shop', 'store', 'retail', 'market'],
+
+                // Food related items
+                'food': ['restaurant', 'grocery', 'supermarket', 'mart', 'meal'],
+                'restaurant': ['food', 'dining', 'cafe', 'eatery', 'meal'],
+                'grocery': ['food', 'supermarket', 'mart', 'shop', 'store'],
+                'cafe': ['restaurant', 'food', 'dining', 'eatery'],
+
+                // Medical related items
+                'medical': ['health', 'hospital', 'clinic', 'healthcare', 'treatment'],
+                'health': ['medical', 'hospital', 'clinic', 'healthcare', 'treatment'],
+                'hospital': ['medical', 'health', 'clinic', 'healthcare', 'treatment'],
+                'doctor': ['medical', 'health', 'hospital', 'clinic', 'treatment'],
+
+                // Electronics related items
+                'electronics': ['appliances', 'gadgets', 'devices', 'tech', 'equipment'],
+                'appliances': ['electronics', 'gadgets', 'devices', 'home', 'equipment'],
+                'gadgets': ['electronics', 'appliances', 'devices', 'tech', 'equipment'],
+                'devices': ['electronics', 'appliances', 'gadgets', 'tech', 'equipment'],
+
+                // Voice related items
+                'voice': ['audio', 'recording', 'microphone', 'sound', 'speaker'],
+                'male': ['man', 'men', 'voice', 'audio', 'recording'],
+                'female': ['woman', 'women', 'voice', 'audio', 'recording'],
+                'dual': ['both', 'multiple', 'voices', 'conversation', 'dialogue'],
+                'audio': ['sound', 'recording', 'voice', 'microphone', 'mp3'],
+                'video': ['visual', 'youtube', 'movie', 'clip', 'film']
+            };
+
+            let scoredItems = [];
+
+            items.forEach(item => {
+                let score = 0;
+
+                // Check search term directly
+                const searchText = [
+                    item.title,
+                    item.description,
+                    ...item.tags,
+                    ...(item.relatedTerms || [])
+                ].join(' ').toLowerCase();
+
+                if (searchText.includes(searchTerm)) {
+                    score += 5;
+                }
+
+                // Check related categories
+                if (relatedCategories[searchTerm]) {
+                    relatedCategories[searchTerm].forEach(relatedTerm => {
+                        if (searchText.includes(relatedTerm)) {
+                            score += 3;
+                        }
+                    });
+                }
+
+                // Check individual words
+                searchTerm.split(' ').forEach(word => {
+                    if (searchText.includes(word)) {
+                        score += 2;
+                    }
+
+                    // Check for similar sounding words (basic approach)
+                    if (word.length > 3) {
+                        item.relatedTerms?.forEach(term => {
+                            if (term.includes(word) || word.includes(term)) {
+                                score += 1;
+                            }
+                        });
+                    }
+                });
+
+                if (score > 0) {
+                    scoredItems.push({ item, score, exactMatch: false });
+                }
+            });
+
+            // If still no results, show some random items
+            if (scoredItems.length === 0 && items.length > 0) {
+                const randomItems = items
+                    .sort(() => Math.random() - 0.5)
+                    .slice(0, 8)
+                    .map(item => ({ item, score: 1, exactMatch: false }));
+                return randomItems;
+            }
+
+            return scoredItems;
+        }
+
+        // Create Card
+        function createCard(item, isExactMatch) {
+            let card;
+
+            if (videoDemos.includes(item)) {
+                card = createVideoCard(item, isExactMatch);
+            } else {
+                card = createAudioCard(item, isExactMatch);
+            }
+
+            return card;
+        }
+
+        // Create Video Card
+        function createVideoCard(video, isExactMatch) {
+            const div = document.createElement('div');
+            div.className = 'video-card';
+
+            const videoId = extractYouTubeId(video.videoUrl);
+            const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+            div.innerHTML = `
+            ${isExactMatch ? '<div class="match-indicator">Exact Match</div>' : ''}
+            <div class="video-wrapper" onclick="openVideoModal('${video.videoUrl}', '${video.type}', '${video.title}')">
+                <img src="${thumbnailUrl}" alt="${video.title}" onerror="this.src='https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                <div class="play-overlay">
+                    <div class="play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="video-info">
+                <h3 class="video-title">${video.title}</h3>
+                <p class="video-description">${video.description}</p>
+                <div class="video-tags">
+                    ${video.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                <div class="video-actions">
+                    <button class="action-btn play-now-btn" onclick="openVideoModal('${video.videoUrl}', '${video.type}', '${video.title}')">
+                        <i class="fas fa-play"></i> Play Now
+                    </button>
+                    <a href="https://wa.me/917355576785?text=I'm interested in ${encodeURIComponent(video.title)} video advertisement" 
+                       class="action-btn book-now-btn" target="_blank">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </div>
+            </div>
+        `;
+
+            return div;
+        }
+
+        // Create Audio Card
+        function createAudioCard(audio, isExactMatch) {
+            const div = document.createElement('div');
+            div.className = 'audio-card';
+
+            const voiceBadge = audio.voiceType === 'male' ? 'male-badge' :
+                audio.voiceType === 'female' ? 'female-badge' : 'dual-badge';
+            const badgeText = audio.voiceType === 'male' ? 'Male Voice' :
+                audio.voiceType === 'female' ? 'Female Voice' : 'Dual Voice';
+
+            div.innerHTML = `
+            ${isExactMatch ? '<div class="match-indicator" style="top: 15px; right: 15px;">Exact Match</div>' : ''}
+            <div class="audio-header">
+                <div class="audio-icon">
+                    <i class="${audio.voiceType === 'male' ? 'fas fa-male' :
+                    audio.voiceType === 'female' ? 'fas fa-female' : 'fas fa-users'}"></i>
+                </div>
+                <div>
+                    <h3 class="audio-title">${audio.title}</h3>
+                    <p class="audio-desc">${audio.description}</p>
+                    <span class="voice-badge ${voiceBadge}">${badgeText}</span>
+                </div>
+            </div>
+            <div class="audio-player-container">
+                <audio class="audio-player" controls controlsList="nodownload">
+                    <source src="${audio.audioUrl}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="video-tags">
+                ${audio.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            </div>
+            <div class="video-actions">
+                <a href="https://wa.me/917355576785?text=I'm interested in ${encodeURIComponent(audio.title)} voice recording" 
+                   class="action-btn book-now-btn" target="_blank">
+                    <i class="fas fa-calendar-check"></i> Book Recording
+                </a>
+            </div>
+        `;
+
+            return div;
+        }
+
+        // Update results count
+        function updateResultsCount(count) {
+            const countElement = document.getElementById('resultsCount');
+            countElement.textContent = `${count} Items`;
+        }
+
+        // Hide smart notice
+        function hideSmartNotice() {
+            document.getElementById('smartNotice').style.display = 'none';
+        }
+
+        // Show fallback message
+        function showFallbackMessage(searchTerm) {
+            const notice = document.getElementById('smartNotice');
+            const noticeText = document.getElementById('noticeText');
+
+            noticeText.innerHTML = `
+            <strong>Note:</strong> No matches found for "${searchTerm}". Showing all available advertisements instead.
+            <br><br>
+            <strong>Popular searches:</strong> business, festival, shop, healthcare, restaurant, electronics, video ads, male voice, audio recording
+        `;
+            notice.style.display = 'flex';
+        }
+
+        // Select category - UPDATED FUNCTION
+        function selectCategory(category) {
+            currentCategory = category;
+
+            // Update active button
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Get keyword for this category
+            const keyword = categoryKeywords[category] || category;
+
+            if (keyword) {
+                // Set search input with keyword
+                document.getElementById('searchInput').value = keyword;
+                // Perform search
+                smartSearch();
+            } else {
+                // If no keyword (like 'all'), show all items
+                loadAllItems();
+            }
+        }
+
+        // Search by tag
+        function searchByTag(tag) {
+            document.getElementById('searchInput').value = tag;
+            smartSearch();
+        }
+
+        // Setup search
+        function setupSearch() {
+            // Clear search on empty input
+            document.getElementById('searchInput').addEventListener('input', function (e) {
+                if (this.value.trim() === '') {
+                    loadAllItems();
+                }
+            });
+        }
+
+        // Setup category selector - UPDATED FUNCTION
+        function setupCategorySelector() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            categoryButtons.forEach(button => {
+                // Remove old onclick attribute
+                button.removeAttribute('onclick');
+
+                // Add new event listener
+                button.addEventListener('click', function () {
+                    // Get category from button text or data
+                    let category = this.querySelector('i').className.includes('video') ? 'video' :
+                        this.querySelector('i').className.includes('microphone') ? 'audio' :
+                            this.querySelector('i').className.includes('male') ? 'male' :
+                                this.querySelector('i').className.includes('female') ? 'female' :
+                                    this.querySelector('i').className.includes('users') ? 'dual' : 'all';
+
+                    // For "All" button
+                    if (this.querySelector('i').className.includes('globe')) {
+                        category = 'all';
+                    }
+
+                    selectCategory(category);
+                });
+            });
+        }
+
+        // Video Modal Functions
+        function openVideoModal(videoUrl, type, title) {
+            const modal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+
+            if (type === 'youtube') {
+                modalVideo.src = videoUrl + '?autoplay=1&rel=0&modestbranding=1&controls=1';
+            } else {
+                modalVideo.src = videoUrl;
+                modalVideo.setAttribute('controls', 'true');
+            }
+
+            modalVideo.title = title;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+
+            modalVideo.src = '';
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Extract YouTube ID
+        function extractYouTubeId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : 'CrCfH5-qQ9s';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('videoModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeVideoModal();
+            }
+        });
+
+        // In your frontend JS files (like demos.html), add this:
+        const API_BASE_URL = window.location.hostname === 'localhost'
+            ? 'http://localhost:5000/api'
+            : '/api'; // Use relative path for production
+    </script>
+    <div class="copyright"
+        style="text-align: center; padding: 20px; color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+        <p>Website Designed by <a href="shivangi-chauhan.html" target="_blank"
+                style="color: var(--primary-red);">Shivangi Chauhan</a></p>
+    </div>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/917355576785?text=Hello%20APS%20Advertising,%20I'm%20interested%20in%20your%20services.%20Can%20you%20tell%20me%20more%20about%20your%20advertising%20solutions?"
+        class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+</body>
+
+</html>

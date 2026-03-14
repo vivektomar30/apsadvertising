@@ -1,0 +1,450 @@
+            {
+                id: 3,
+                title: "Political Campaign Ad",
+                description: "Impactful political campaign video with strong messaging",
+                type: "video",
+                category: "political",
+                thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/clI84WWMIcU",
+                tags: ["political", "campaign", "election", "leadership", "government"]
+            },
+            {
+                id: 4,
+                title: "Voice Over Announcement",
+                description: "Professional voice-over announcement for radio and digital platforms",
+                type: "video",
+                category: "voice",
+                thumbnail: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/CrCfH5-qQ9s",
+                tags: ["voice", "announcement", "radio", "audio", "professional"]
+            },
+            {
+                id: 5,
+                title: "Education Institute Promo",
+                description: "Engaging video for school and college admissions",
+                type: "video",
+                category: "education",
+                thumbnail: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/D58X-8X9XXI",
+                tags: ["education", "school", "college", "admission", "learning"]
+            },
+            {
+                id: 6,
+                title: "E-commerce Shopping Experience",
+                description: "Modern e-commerce advertisement showcasing online shopping",
+                type: "video",
+                category: "business",
+                thumbnail: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/_HXDGxKkrZk",
+                tags: ["ecommerce", "online", "shopping", "digital", "retail"]
+            },
+            {
+                id: 7,
+                title: "Real Estate Property Tour",
+                description: "Luxury home walkthrough video for real estate marketing",
+                type: "video",
+                category: "business",
+                thumbnail: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/M7LC3N98gqg",
+                tags: ["real estate", "property", "home", "luxury", "tour"]
+            },
+            {
+                id: 8,
+                title: "Holi Festival Celebration",
+                description: "Vibrant and colorful Holi festival advertisement",
+                type: "video",
+                category: "festival",
+                thumbnail: "https://images.unsplash.com/photo-1582252467798-158864789851?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/HhF690uJdGk",
+                tags: ["festival", "holi", "colors", "celebration", "spring"]
+            },
+            {
+                id: 9,
+                title: "Restaurant Food Promo",
+                description: "Mouth-watering food video for restaurant promotion",
+                type: "video",
+                category: "business",
+                thumbnail: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/9g86iG5s5lE",
+                tags: ["food", "restaurant", "dining", "delicious", "promo"]
+            },
+            {
+                id: 10,
+                title: "Gym & Fitness Motivation",
+                description: "High-energy fitness center promotional video",
+                type: "video",
+                category: "business",
+                thumbnail: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/D351z_Fxp7E",
+                tags: ["fitness", "gym", "workout", "health", "motivation"]
+            },
+            {
+                id: 11,
+                title: "Tech Product Launch",
+                description: "Sleek product reveal video for technology brands",
+                type: "video",
+                category: "business",
+                thumbnail: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/yJg-Y5byMMw",
+                tags: ["tech", "product", "launch", "innovation", "gadget"]
+            },
+            {
+                id: 12,
+                title: "Wedding Planner Ad",
+                description: "Dreamy wedding planning service advertisement",
+                type: "video",
+                category: "business",
+                thumbnail: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/-5J5E_l8bLk",
+                tags: ["wedding", "event", "planning", "marriage", "celebration"]
+            },
+            {
+                id: 13,
+                title: "Navratri Special",
+                description: "Traditional Garba and Dandiya festival promo",
+                type: "video",
+                category: "festival",
+                thumbnail: "https://images.unsplash.com/photo-1570158495034-7c33659c2505?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/q3GfQ-5qJzE",
+                tags: ["festival", "navratri", "garba", "dance", "culture"]
+            },
+            {
+                id: 14,
+                title: "Candidate Introduction",
+                description: "Political candidate biography and vision video",
+                type: "video",
+                category: "political",
+                thumbnail: "https://images.unsplash.com/photo-1541872703-74c5963631df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/u3Jt_g_F_gE",
+                tags: ["political", "election", "candidate", "vote", "leader"]
+            },
+            {
+                id: 15,
+                title: "Coaching Classes Promo",
+                description: "Success stories and facilities tour for coaching center",
+                type: "video",
+                category: "education",
+                thumbnail: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/8J_qJ_qJ_qJ",
+                tags: ["education", "coaching", "classes", "study", "success"]
+            },
+            {
+                id: 16,
+                title: "Medical Services Ad",
+                description: "Hospital and healthcare services promotion",
+                type: "video",
+                category: "business",
+                thumbnail: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                videoUrl: "https://www.youtube.com/embed/VideoID1",
+                tags: ["medical", "health", "hospital", "services", "care"]
+            },
+
+            // --- MALE AUDIO CONTENT ---
+             {
+                id: 101,
+                title: "Aarshi Ahmed",
+                description: "Male voice advertisement for Aarshi Ahmed",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Aarshi Ahmed (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "ad"]
+            },
+            {
+                id: 102,
+                title: "Arshad Warsi",
+                description: "Male voice advertisement for Arshad Warsi",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Arshad Warsi (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "ad"]
+            },
+            {
+                id: 103,
+                title: "Komal Institute",
+                description: "Educational institute promotion",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Komal Institute (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "education"]
+            },
+            {
+                id: 104,
+                title: "Netra Camp",
+                description: "Eye care camp announcement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Netra Camp ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "health"]
+            },
+            {
+                id: 105,
+                title: "Nv Balia",
+                description: "Local promotion for Nv Balia",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Nv Balia ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "promotion"]
+            },
+            {
+                id: 106,
+                title: "Nv Bengali",
+                description: "Regional advertisement in Bengali style",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Nv Bengali (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "regional"]
+            },
+            {
+                id: 107,
+                title: "Nv Jhunjhunu",
+                description: "Local advertisement for Jhunjhunu",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Nv Jhunjhunu (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "local"]
+            },
+            {
+                id: 108,
+                title: "Nv Rajashthan",
+                description: "Rajasthan regional advertisement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Nv Rajashthan (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "regional"]
+            },
+            {
+                id: 109,
+                title: "Nv Sg Mart",
+                description: "SG Mart promotional audio",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Nv Sg Mart (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "mart"]
+            },
+            {
+                id: 110,
+                title: "Nv Shoppe Pumato",
+                description: "Shoppe Pumato advertisement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Nv Shoppe Pumato (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "shop"]
+            },
+            {
+                id: 111,
+                title: "Nv Yuvika",
+                description: "Yuvika brand promotion",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Nv Yuvika( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "brand"]
+            },
+            {
+                id: 112,
+                title: "Shivay Hospital",
+                description: "Hospital services announcement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M) Shivay Hospital 🏥 (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "hospital"]
+            },
+            {
+                id: 113,
+                title: "Bhole Aata Chakki",
+                description: "Local flour mill advertisement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M)Bhole Aata Chakki ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "local"]
+            },
+             {
+                id: 114,
+                title: "Nv Agra",
+                description: "Agra regional advertisement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M)Nv Agra (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "regional"]
+            },
+             {
+                id: 115,
+                title: "Nv Giridh",
+                description: "Giridh regional promotion",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M)Nv Giridh(APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "regional"]
+            },
+             {
+                id: 116,
+                title: "Nv Orissa",
+                description: "Orissa regional promotion",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M)Nv Orissa (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "regional"]
+            },
+             {
+                id: 117,
+                title: "Rajma Chawal",
+                description: "Food stall advertisement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M)Rajma Chawal (Aps Advertisement Studio 🎙️🎶 7355576785).mp3",
+                tags: ["male", "food"]
+            },
+             {
+                id: 118,
+                title: "Urwa Mart",
+                description: "Supermarket promotion",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M)Urwa Mart ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "mart"]
+            },
+             {
+                id: 119,
+                title: "Vedhanshi Chasma Camp",
+                description: "Eye camp advertisement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(M)Vedhanshi Chasma Camp (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "health"]
+            },
+            {
+                id: 120,
+                title: "New Anubhav Electronic Shop",
+                description: "Electronic shop dual voice ad",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(MF)New Anubhav Electronic Shop ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "electronics"]
+            },
+             {
+                id: 121,
+                title: "Health Camp",
+                description: "General health camp announcement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(S) Health Camp (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "health"]
+            },
+            {
+                id: 122,
+                title: "Netra Camp New",
+                description: "New eye camp promotion",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(S) Netra Camp New ( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "health"]
+            },
+            {
+                id: 123,
+                title: "Vedhanshi Chasma Ghar",
+                description: "Optical shop advertisement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/(S) Vedhanshi Chasma Ghar (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["male", "optical"]
+            },
+             {
+                id: 124,
+                title: "Indian Oil Pipeline",
+                description: "Industrial announcement for Indian Oil",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/Indian Oil Pipeline APS Advertising 7355576785.mp3",
+                tags: ["male", "industrial"]
+            },
+             {
+                id: 125,
+                title: "M BANK CSC",
+                description: "Bank CSC services announcement",
+                type: "audio",
+                category: "male",
+                audioUrl: "male/M BANK CSC ।। APS ADVERTISING 7355576785.mp3",
+                tags: ["male", "bank"]
+            },
+
+            // --- FEMALE AUDIO CONTENT ---
+             {
+                id: 201,
+                title: "Politics 2",
+                description: "Political campaign advertisement",
+                type: "audio",
+                category: "female",
+                audioUrl: "female/(F) Politics 2( APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["female", "political"]
+            },
+            {
+                id: 202,
+                title: "Aarish",
+                description: "Aarish brand promotion",
+                type: "audio",
+                category: "female",
+                audioUrl: "female/(MF) Aarish (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["female", "brand"]
+            },
+            {
+                id: 203,
+                title: "Creative Maths Academy",
+                description: "Educational academy promotion",
+                type: "audio",
+                category: "female",
+                audioUrl: "female/(MF) Creative Maths Academy (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["female", "education"]
+            },
+            {
+                id: 204,
+                title: "Dildaar Malik",
+                description: "Promotion for Dildaar Malik",
+                type: "audio",
+                category: "female",
+                audioUrl: "female/(MF) Dildaar Malik (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["female", "promotion"]
+            },
+            {
+                id: 205,
+                title: "Fashion Point",
+                description: "Fashion store advertisement",
+                type: "audio",
+                category: "female",
+                audioUrl: "female/(MF) Fashion Point (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["female", "fashion"]
+            },
+            {
+                id: 206,
+                title: "Mahindra",
+                description: "Automotive advertisement for Mahindra",
+                type: "audio",
+                category: "female",
+                audioUrl: "female/(MF) Mahindra (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["female", "automotive"]
+            },
+            {
+                id: 207,
+                title: "Chhath Pooja",
+                description: "Festival announcement for Chhath Pooja",
+                type: "audio",
+                category: "female",
+                audioUrl: "female/(MF)Chhath Pooja (APS ADVERTISEMENT STUDIO 🎙️ 7355576785)-1.mp3",
+                tags: ["female", "festival"]
+            },
+            {
+                id: 208,
+                title: "Hakeem Healthcare",
+                description: "Healthcare services promotion",
+                type: "audio",
+                category: "female",
+                audioUrl: "female/(MF)Hakeem Healthcare (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["female", "health"]
+            },
+             {
+                id: 209,
+                title: "Sushila Bazar New",
+                description: "Marketplace promotion",
+                type: "audio",
+                category: "female",
+                audioUrl: "female/(MF)Sushila Bazar New (APS ADVERTISEMENT STUDIO 🎙️ 7355576785).mp3",
+                tags: ["female", "retail"]
+            }

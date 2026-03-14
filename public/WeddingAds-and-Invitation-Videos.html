@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Ads & Invitation Videos - APS Advertising | Premium Marriage Announcements India</title>
+    <link rel="icon" type="image/png" href="img/APS Advertising Logo (1).png">
+
+    <!-- SEO Meta -->
+    <meta name="description" content="APS Advertising: Create stunning wedding invitation videos, marriage ads & celebration promos in Hindi, English & 15+ regional languages. 4K quality, 48h delivery. Serving all India.">
+    <meta name="keywords" content="wedding invitation video India, shaadi ke vigyapan, marriage ads video, wedding ads, shaadi card video, bridal entry video, groom entry video, best wedding ad agency India">
+    <meta name="author" content="APS Advertising">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://apsadvertise.com/WeddingAds-and-Invitation-Videos.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Wedding Ads & Invitation Videos - APS Advertising">
+    <meta property="og:description" content="Professional wedding advertising & invitation videos in all Indian languages. 4K quality, 48h delivery.">
+    <meta property="og:image" content="/public/img/about studio.png">
+    <meta property="og:url" content="https://apsadvertise.com/wedding-ads">
+    <meta property="og:type" content="website">
+
+    <script src="js/language-toggle.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <!-- Preload -->
+    <link rel="preload" href="img/APS Advertising Logo (1).png" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-red: #D2042D;
+            --pure-white: #FFFFFF;
+            --off-white: #F5F5F5;
+            --primary-black: #000000;
+            --dark-grey: #0A0A0A;
+            --medium-grey: #1A1A1A;
+            --light-grey: #333333;
+        }
+        body {
+            font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--primary-black);
+            color: var(--pure-white);
+            overflow-x: hidden;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        body.menu-open { overflow: hidden; position: fixed; width: 100%; height: 100%; }
+        h1,h2,h3,h4 { font-family: 'Montserrat', 'Poppins', sans-serif; font-weight: 700; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Top bar - homepage style */
+        .top-bar {
+            background: var(--primary-black);
+            padding: 10px 4%;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.9rem; border-bottom: 1px solid var(--light-grey);
+            position: relative; z-index: 1001;
+        }
+        .contact-top { display: flex; gap: 15px; align-items: center; }
+        .contact-top a {
+            display: flex; align-items: center; gap: 6px; padding: 5px 10px;
+            border-radius: 6px; background: rgba(255,255,255,0.05);
+            color: var(--pure-white); text-decoration: none; transition: all 0.3s ease;
+        }
+        .contact-top a:hover { background: rgba(210,4,45,0.1); border-color: var(--primary-red); }
+        .contact-top i { color: var(--primary-red); }
+        .top-actions { display: flex; gap: 10px; align-items: center; }
+        .top-btn {
+            padding: 8px 16px; border-radius: 25px; font-weight: 600;
+            display: flex; align-items: center; gap: 6px; text-decoration: none;
+            font-size: 0.85rem; border: 2px solid transparent; transition: all 0.3s ease;
+        }
+        .chat-btn { background: var(--pure-white); color: var(--primary-black); }
+        .chat-btn:hover { background: var(--primary-red); color: var(--pure-white); }
+        .book-btn { background: transparent; color: var(--pure-white); border-color: var(--primary-red); }
+        .book-btn:hover { background: var(--primary-red); color: var(--pure-white); }
+
+        /* Navbar - homepage style with back arrow */
+        .navbar {
+            background: var(--primary-black); padding: 12px 4%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--light-grey);
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled { padding: 8px 4%; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); }
+        .navbar-left { display: flex; align-items: center; gap: 12px; }
+        .back-to-home {
+            display: flex; align-items: center; justify-content: center;
+            width: 40px; height: 40px; border-radius: 50%;
+            background: rgba(255,255,255,0.08); color: var(--pure-white) !important;
+            text-decoration: none; transition: all 0.3s ease;
+        }
+        .back-to-home:hover { background: var(--primary-red); transform: translateX(-3px); }
+        .back-to-home i { font-size: 1rem; }
+        .logo-container { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-img { height: 45px; width: 45px; object-fit: cover; border-radius: 50%; border: 2px solid var(--primary-red); }
+        .logo-text { font-size: 1.3rem; font-weight: 700; color: var(--pure-white); }
+        .nav-right { display: flex; align-items: center; gap: 12px; }
+        .aps-lang-toggle-container { display: flex; align-items: center; }
+        .mobile-menu-btn {
+            background: none; border: none; color: var(--pure-white) !important; font-size: 1.4rem;
+            cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+            border-radius: 6px; transition: all 0.3s ease;
+        }
+        .mobile-menu-btn:hover { background: rgba(255,255,255,0.1); }
+        .desktop-nav-links { display: flex; list-style: none; gap: 20px; }
+        .desktop-nav-links a {
+            color: var(--pure-white); text-decoration: none; font-weight: 600;
+            position: relative; padding: 6px 0;
+        }
+        .desktop-nav-links a::before {
+            content: ''; position: absolute; bottom: 0; left: 50%; width: 0;
+            height: 2px; background: var(--primary-red); transition: 0.3s; transform: translateX(-50%);
+        }
+        .desktop-nav-links a:hover::before { width: 100%; }
+        .desktop-nav-links a:hover { color: var(--primary-red); }
+
+        /* Mobile menu */
+        .mobile-menu {
+            position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+            background: rgba(0,0,0,0.98); z-index: 10000; padding: 70px 20px 30px;
+            border-left: 1px solid rgba(255,255,255,0.1); transition: right 0.3s; overflow-y: auto;
+            backdrop-filter: blur(10px);
+        }
+        .mobile-menu.active { right: 0; }
+        .menu-overlay {
+            position: fixed; top:0; left:0; width:100%; height:100%;
+            background: rgba(0,0,0,0.5); z-index:9999; display:none;
+        }
+        .menu-overlay.active { display: block; }
+        .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .mobile-menu-close { background: none; border: none; color: var(--primary-red); font-size: 1.3rem; cursor: pointer; }
+        .mobile-nav-links { list-style: none; }
+        .mobile-nav-links a {
+            display: block; color: white; text-decoration: none; padding: 12px 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.08); transition: all 0.3s;
+        }
+        .mobile-nav-links a:hover { color: var(--primary-red); padding-left: 15px; }
+
+        /* whatsapp float */
+        .whatsapp-float {
+            position: fixed; width: 50px; height: 50px; bottom: 20px; right: 20px;
+            z-index: 10000; animation: float 3s infinite; filter: drop-shadow(0 6px 6px rgba(0,0,0,0.2));
+        }
+        .whatsapp-float img { width: 100%; height: 100%; object-fit: contain; }
+        @keyframes float { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-6px); } }
+
+        /* breadcrumbs */
+        .breadcrumbs {
+            padding: 12px 4%; background: var(--dark-grey); border-bottom: 1px solid #333;
+        }
+        .breadcrumbs-container { max-width: 1200px; margin: 0 auto; }
+        .breadcrumbs-list {
+            display: flex; align-items: center; gap: 8px; list-style: none; flex-wrap: wrap;
+        }
+        .breadcrumbs-list li { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .breadcrumbs-list a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .breadcrumbs-list a:hover { color: var(--primary-red); }
+        .breadcrumbs-list i { color: var(--primary-red); font-size: 0.7rem; }
+        .breadcrumbs-list li:last-child { color: var(--primary-red); font-weight: 600; }
+
+        /* Hero - neat & user-friendly */
+        .wedding-hero {
+            min-height: 60vh; padding: 40px 4%;
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('img/about studio.png') center/cover no-repeat;
+            text-align: center;
+        }
+        .wedding-hero-content { max-width: 800px; }
+        .wedding-hero-title {
+            font-size: 2.8rem; font-weight: 700; color: var(--pure-white);
+            line-height: 1.2; margin-bottom: 12px;
+        }
+        .wedding-hero-title .script { color: var(--primary-red); font-family: 'Great Vibes', cursive; font-size: 3rem; }
+        .wedding-hero-subtitle {
+            font-size: 1.2rem; color: rgba(255,255,255,0.95);
+            margin-bottom: 16px; font-weight: 500;
+        }
+        .wedding-hero-description {
+            font-size: 1rem; color: rgba(255,255,255,0.88);
+            max-width: 600px; margin: 0 auto 24px;
+            line-height: 1.7;
+        }
+        .wedding-hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .wedding-hero-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 24px; border-radius: 50px; font-weight: 600; font-size: 0.95rem;
+            text-decoration: none; transition: 0.3s; border: 2px solid transparent;
+        }
+        .wedding-hero-btn-primary { background: var(--primary-red); color: var(--pure-white); }
+        .wedding-hero-btn-primary:hover { background: transparent; border-color: var(--primary-red); color: var(--pure-white); }
+        .wedding-hero-btn-secondary { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: var(--pure-white); }
+        .wedding-hero-btn-secondary:hover { background: var(--pure-white); color: #000; }
+
+        /* about block: big image left, content right */
+        .about-block {
+            padding: 36px 4%;
+            background: var(--primary-black);
+        }
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: center;
+        }
+        .about-image {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid var(--primary-red);
+            box-shadow: 0 20px 30px rgba(210,4,45,0.3);
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        .about-image:hover img { transform: scale(1.02); }
+        .about-content h2 {
+            font-size: 2.2rem;
+            color: var(--pure-white);
+            margin-bottom: 14px;
+        }
+        .about-content h2 span {
+            color: var(--primary-red);
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.6rem;
+        }
+        .about-content p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .about-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 16px 0;
+        }
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(210,4,45,0.1);
+            padding: 8px 16px;
+            border-radius: 30px;
+            border: 1px solid var(--primary-red);
+        }
+        .highlight-item i { color: var(--primary-red); font-size: 1rem; }
+        .highlight-item span { color: var(--pure-white); font-weight: 500; }
+
+        /* services - icon on right of content */
+        .wedding-services { padding: 32px 4%; background: var(--dark-grey); }
+        .section-title {
+            text-align: center; font-size: 2rem; margin-bottom: 24px;
+            color: var(--pure-white); text-transform: uppercase;
+        }
+        .section-title::after {
+            content: ''; display: block; width: 60px; height: 3px;
+            background: var(--primary-red); margin: 10px auto 0;
+        }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 16px;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .service-card {
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+            border-radius: 12px; padding: 20px;
+            border: 1px solid rgba(210,4,45,0.2); transition: 0.3s;
+            display: flex; align-items: center; gap: 16px;
+        }
+        .service-card:hover { transform: translateY(-4px); border-color: var(--primary-red); box-shadow: 0 10px 25px rgba(210,4,45,0.15); }
+        .service-card-content { flex: 1; min-width: 0; }
+        .service-icon {
+            font-size: 2rem; color: var(--primary-red); width: 56px; height: 56px; flex-shrink: 0;
+            border-radius: 50%; background: rgba(210,4,45,0.1); display: flex; align-items: center; justify-content: center;
+            border: 2px solid rgba(210,4,45,0.3);
+        }
+        .service-card h3 { font-size: 1.2rem; color: var(--pure-white); margin-bottom: 6px; }
+        .service-card p { color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 12px; line-height: 1.5; }
+        .service-book-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+            background: var(--primary-red); color: white; padding: 10px 20px; border-radius: 25px;
+            font-weight: 600; font-size: 0.9rem; text-decoration: none; border: 2px solid var(--primary-red);
+        }
+        .service-book-btn:hover { background: transparent; color: var(--primary-red); }
+
+        /* Video demos + Wedding cards - interactive, fills desktop */
+        .video-showcase { padding: 32px 4%; background: var(--primary-black); }
+        .video-section-title {
+            text-align: center; font-size: 1.6rem; font-weight: 700;
+            margin-bottom: 16px; color: var(--pure-white);
+        }
+        .video-section-title::after {
+            content: ''; display: block; width: 50px; height: 3px;
+            background: var(--primary-red); margin: 8px auto 0;
+        }
+        .video-demos-hint {
+            text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+        }
+        .video-demos-grid {
+            display: flex; flex-wrap: nowrap; justify-content: center; align-items: flex-start;
+            gap: 16px; max-width: 100%; margin: 0 auto;
+        }
+        .demo-card {
+            position: relative; border-radius: 12px; overflow: hidden;
+            aspect-ratio: 9/16; width: 150px; flex-shrink: 0;
+            cursor: pointer; border: 2px solid rgba(210,4,45,0.3);
+            transition: all 0.3s ease; background: #000;
+        }
+        .demo-card:hover { border-color: var(--primary-red); transform: scale(1.03); box-shadow: 0 8px 24px rgba(210,4,45,0.2); }
+        .video-demo-card video {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+        }
+        .demo-card .play-overlay {
+            position: absolute; inset: 0;
+            background: rgba(0,0,0,0.35);
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.3s;
+        }
+        .video-demo-card:hover .play-overlay { background: rgba(0,0,0,0.2); }
+        .demo-card .play-overlay i {
+            font-size: 2.8rem; color: rgba(255,255,255,0.95);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .demo-card .card-label {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            padding: 8px 10px; background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white; font-size: 0.78rem; font-weight: 500;
+        }
+        @media (min-width: 769px) {
+            .video-demos-grid { gap: 28px; }
+            .demo-card { width: 260px; }
+        }
+        @media (min-width: 1024px) {
+            .video-demos-grid { gap: 36px; }
+            .demo-card { width: 320px; }
+        }
+        /* Mobile: one row, side by side */
+        @media (max-width: 768px) {
+            .video-demos-grid { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .demo-card { width: 145px; }
+        }
+        /* Video modal - original vertical format */
+        .video-modal {
+            position: fixed; inset: 0; z-index: 10002;
+            background: rgba(0,0,0,0.95); display: none;
+            align-items: center; justify-content: center; padding: 20px;
+        }
+        .video-modal.active { display: flex; }
+        .video-modal-inner {
+            max-width: 100%; max-height: 90vh;
+            width: auto; height: auto;
+        }
+        .video-modal-inner video {
+            max-height: 85vh; width: auto; max-width: 100%;
+            border-radius: 12px; border: 2px solid var(--primary-red);
+            object-fit: contain; /* Vertical videos display in original format */
+        }
+        .video-modal-close {
+            position: absolute; top: 20px; right: 20px;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: rgba(255,255,255,0.15); color: white;
+            border: none; cursor: pointer; font-size: 1.4rem;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s;
+        }
+        .video-modal-close:hover { background: var(--primary-red); }
+
+        /* ===== GALLERY SLIDER (right to left infinite) ===== */
+        .gallery-slider-section {
+            padding: 32px 4%;
+            background: var(--dark-grey);
+            overflow: hidden;  /* hide scrollbar */
+        }
+        .slider-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .slider-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            color: var(--pure-white);
+            text-transform: uppercase;
+        }
+        .slider-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--primary-red);
+            margin: 15px auto 0;
+        }
+
+        /* slider track */
+        .slider-track {
+            display: flex;
+            gap: 25px;
+            animation: scrollRightToLeft 30s linear infinite;
+            width: fit-content;
+        }
+
+        /* each slide */
+        .slide {
+            flex: 0 0 280px;  /* fixed width, adjust as needed */
+            height: 210px;     /* maintain aspect ~4:3 */
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: border 0.3s;
+            background: #000;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .slide:hover {
+            border-color: var(--primary-red);
+        }
+
+        /* keyframes for right-to-left scroll */
+        @keyframes scrollRightToLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-280px * 4 - 25px * 4)); /* 4 slides + gaps */
+                /* total width: 4 slides * 280px + 3 gaps * 25px? Actually we have 4 slides visible but we need to move total set width */
+                /* Let's compute: 4 slides * 280px = 1120px, plus 3 gaps between them? But we have 4 slides in original set, we duplicate to make infinite */
+                /* For smooth loop, we animate half of total width (original set) */
+                /* We'll set animation to move by exactly half the track width (since we duplicate) */
+            }
+        }
+        /* duplicate slides to create seamless loop */
+        .slider-track {
+            display: flex;
+            gap: 25px;
+            animation: scrollRightToLeft 40s linear infinite;
+            width: fit-content;
+        }
+
+        /* adjust keyframe to move by the width of one set (4 slides + 3 gaps) */
+        @keyframes scrollRightToLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-280px * 4 - 25px * 3)); } /* move left by exactly one set */
+        }
+
+        /* hover pause */
+        .slider-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* make it responsive */
+        @media (max-width: 768px) {
+            .slide {
+                flex: 0 0 220px;
+                height: 165px;
+            }
+            @keyframes scrollRightToLeft {
+                100% { transform: translateX(calc(-220px * 4 - 25px * 3)); }
+            }
+        }
+        /* ===== end gallery slider ===== */
+
+        /* why aps - icon on right of content */
+        .why-aps { padding: 32px 4%; background: var(--primary-black); }
+        .why-aps-container .section-title { margin-bottom: 8px; }
+        .why-aps-container > p { margin-bottom: 20px; }
+        .why-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .why-item {
+            background: rgba(255,255,255,0.02); padding: 18px 20px; border-radius: 12px;
+            border: 1px solid rgba(210,4,45,0.2);
+            display: flex; align-items: center; gap: 16px;
+        }
+        .why-item-content { flex: 1; min-width: 0; }
+        .why-item i { font-size: 1.8rem; color: var(--primary-red); flex-shrink: 0; }
+        .why-item h3 { color: white; margin-bottom: 4px; font-size: 1.05rem; }
+        .why-item p { color: rgba(255,255,255,0.85); font-size: 0.88rem; line-height: 1.4; }
+
+        /* testimonials */
+        .wedding-testimonials { padding: 32px 4%; background: var(--dark-grey); }
+        .testimonials-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 16px;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .testimonial-card {
+            background: #1a1a1a; border-radius: 15px; padding: 25px;
+            border: 1px solid rgba(210,4,45,0.2);
+        }
+        .testimonial-rating { color: var(--primary-red); margin-bottom: 15px; }
+        .testimonial-text { color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 20px; }
+        .author-info h4 { color: white; }
+        .author-info p { color: rgba(255,255,255,0.6); font-size: 0.8rem; }
+
+        /* faq */
+        .wedding-faq { padding: 32px 4%; background: var(--primary-black); }
+        .faq-container { max-width: 900px; margin: 0 auto; }
+        .faq-item {
+            background: #1a1a1a; border-radius: 10px; margin-bottom: 10px;
+            border: 1px solid rgba(210,4,45,0.2); overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px; cursor: pointer; display: flex; justify-content: space-between;
+            color: white; font-weight: 600;
+        }
+        .faq-question:hover { background: rgba(210,4,45,0.1); }
+        .faq-question i { color: var(--primary-red); transition: transform 0.3s; }
+        .faq-question.active i { transform: rotate(180deg); }
+        .faq-answer {
+            padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s;
+            color: rgba(255,255,255,0.8);
+        }
+        .faq-answer.active { padding: 0 20px 20px; max-height: 400px; }
+
+        /* cta */
+        .wedding-cta {
+            padding: 36px 4%; background: linear-gradient(135deg, #1a0a0a, #0a0a0a);
+            text-align: center;
+        }
+        .cta-container { max-width: 700px; margin: 0 auto; }
+        .cta-container h2 { font-size: 2rem; color: white; font-weight: 700; }
+        .cta-container h2 span { color: var(--primary-red); font-family: 'Great Vibes', cursive; font-size: 2.5rem; }
+        .cta-container > p { font-size: 1rem; color: rgba(255,255,255,0.9); margin-top: 12px; }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+        .cta-btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 35px; border-radius: 50px; font-weight: 600; text-decoration: none;
+            border: 2px solid transparent; transition: 0.3s;
+        }
+        .cta-btn-whatsapp { background: #25D366; color: white; }
+        .cta-btn-whatsapp:hover { background: transparent; border-color: #25D366; color: #25D366; }
+        .cta-btn-call { background: var(--primary-red); color: white; }
+        .cta-btn-call:hover { background: transparent; border-color: var(--primary-red); color: var(--primary-red); }
+
+        /* footer */
+        footer {
+            background: var(--dark-grey); padding: 28px 4% 16px;
+            border-top: 1px solid #333;
+        }
+        .footer-content {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 25px;
+            max-width: 1100px; margin: 0 auto;
+        }
+        .footer-section h3 { color: white; margin-bottom: 15px; }
+        .footer-section p, .footer-section ul { color: rgba(255,255,255,0.8); }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 8px; }
+        .footer-section ul li a { color: rgba(255,255,255,0.8); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+        .footer-section ul li a:hover { color: var(--primary-red); }
+        .social-icons { display: flex; gap: 10px; }
+        .social-icons a {
+            width: 35px; height: 35px; background: rgba(255,255,255,0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: white; transition: 0.3s;
+        }
+        .social-icons a:hover { background: var(--primary-red); }
+        .copyright {
+            text-align: center; padding-top: 20px; margin-top: 20px;
+            border-top: 1px solid #333; color: rgba(255,255,255,0.6);
+        }
+        .copyright a { color: var(--primary-red); text-decoration: none; }
+
+        @media (max-width: 1024px) {
+            .desktop-nav-links { display: none; }
+            .about-container { grid-template-columns: 1fr; }
+            .about-image { max-width: 500px; margin: 0 auto; }
+        }
+        @media (max-width: 768px) {
+            /* Top bar - homepage mobile style */
+            .top-bar { flex-direction: row; padding: 6px 4%; justify-content: space-between; }
+            .contact-top a:first-child { display: none !important; }
+            .contact-top { gap: 0; }
+            .top-actions .book-btn { display: none !important; }
+            .top-btn.chat-btn { padding: 5px 10px; font-size: 0.75rem; }
+            .contact-top a { padding: 4px 8px; font-size: 0.8rem; }
+            /* Navbar mobile */
+            .logo-text { display: none !important; }
+            .navbar { padding: 8px 4%; }
+            /* Hero mobile */
+            .wedding-hero { min-height: 60vh; padding: 40px 4%; }
+            .wedding-hero-title { font-size: 1.9rem; }
+            .wedding-hero-title .script { font-size: 2.2rem; }
+            .wedding-hero-subtitle { font-size: 1rem; }
+            .wedding-hero-description { font-size: 0.95rem; }
+            .wedding-hero-btn { padding: 10px 20px; font-size: 0.9rem; }
+            /* Video demos mobile - one row */
+            .video-demos-grid { justify-content: center; gap: 12px; }
+            .demo-card { width: 140px; }
+            .video-demos-hint { margin-bottom: 14px; font-size: 0.85rem; }
+            .video-section-title { font-size: 1.5rem; }
+            /* Breadcrumbs mobile */
+            .breadcrumbs { padding: 12px 4%; }
+            .breadcrumbs-list { font-size: 0.8rem; }
+            /* About, services mobile */
+            .about-block, .wedding-services { padding: 40px 4%; }
+            .section-title { font-size: 1.6rem; margin-bottom: 24px; }
+            .services-grid { gap: 16px; }
+        }
+        @media (max-width: 480px) {
+            .top-bar { padding: 5px 4%; }
+            .contact-top a { font-size: 0.75rem; padding: 3px 6px; }
+            .top-btn.chat-btn { padding: 4px 8px; font-size: 0.7rem; }
+            .wedding-hero-title { font-size: 1.6rem; }
+            .wedding-hero-title .script { font-size: 1.9rem; }
+            .demo-card { width: 115px; }
+            .about-block, .wedding-services, .wedding-testimonials, .wedding-faq { padding: 30px 4%; }
+            .why-aps { padding: 30px 4%; }
+            .why-grid { gap: 16px; }
+            .why-item { padding: 20px 16px; }
+            .testimonials-grid { gap: 16px; }
+            .testimonial-card { padding: 20px; }
+            .faq-question { padding: 16px; font-size: 0.95rem; }
+            .cta-container h2 { font-size: 1.6rem; }
+            .cta-container h2 span { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/917355576785?text=Hello%20APS%20Advertising,%20I'm%20interested%20in%20wedding%20advertising%20services." class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="contact-top">
+            <a href="mailto:apsadvertisingpr@gmail.com"><i class="fas fa-envelope"></i> apsadvertisingpr@gmail.com</a>
+            <a href="tel:7355576785"><i class="fas fa-phone"></i> 7355576785</a>
+        </div>
+        <div class="top-actions">
+            <a href="https://wa.me/917355576785" class="top-btn chat-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat with Us</a>
+            <a href="contact.html" class="top-btn book-btn"><i class="fas fa-calendar-check"></i> Book Your Ads</a>
+        </div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-left-group navbar-left">
+            <a href="index.html" class="home-arrow" aria-label="Home"><i class="fas fa-arrow-left"></i></a>
+            <a href="index.html" class="logo-container">
+                <img src="img/APS Advertising Logo (1).png" alt="APS Logo" class="logo-img">
+                <div class="logo-text">APS Advertising</div>
+            </a>
+        </div>
+        <div class="nav-right">
+            <div class="aps-lang-toggle-container" aria-label="Language switcher"></div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3 class="mobile-menu-title" data-en="All Pages" data-hi="सभी पेज">All Pages</h3>
+            <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="aps-lang-toggle-container mobile" data-variant="mobile" aria-label="Language switcher" style="width:100%;margin:20px 0;display:flex;justify-content:center;"></div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" data-en="Home" data-hi="होम">Home</a></li>
+            <li><a href="our-services.html" data-en="Our Services" data-hi="हमारी सेवाएं">Our Services</a></li>
+            <li><a href="wwf.html" data-en="What We Offer" data-hi="हम क्या प्रदान करते हैं">What We Offer</a></li>
+            <li><a href="demos.html" data-en="How We Work" data-hi="हम कैसे काम करते हैं">How We Work</a></li>
+            <li><a href="about.html" data-en="Who We Are" data-hi="हमारा काम">Who We Are</a></li>
+            <li><a href="WeddingAds-and-Invitation-Videos.html" style="color: var(--primary-red);" data-en="Wedding Ads" data-hi="वेडिंग एड्स">Wedding Ads</a></li>
+            <li><a href="SchoolAdvertisement.html" data-en="School Advertisement" data-hi="स्कूल विज्ञापन">School Advertisement</a></li>
+            <li><a href="partners.html" data-en="Partners" data-hi="साझेदार">Partners</a></li>
+            <li><a href="contact.html" data-en="Contact" data-hi="संपर्क">Contact</a></li>
+            <li><a href="feedback.html" data-en="Feedback" data-hi="प्रतिक्रिया">Feedback</a></li>
+        </ul>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ul class="breadcrumbs-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> <span data-en="Home" data-hi="होम">Home</span></a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="demos.html" data-en="Services" data-hi="सेवाएं">Services</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li data-en="Wedding Ads & Invitations" data-hi="वेडिंग एड्स और इनविटेशन">Wedding Ads & Invitations</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="wedding-hero">
+        <div class="wedding-hero-content">
+            <h1 class="wedding-hero-title"><span class="script" data-en="Wedding" data-hi="वेडिंग">Wedding</span> <span data-en="Advertisement" data-hi="विज्ञापन">Advertisement</span> & <br><span class="script" data-en="Invitation" data-hi="इनविटेशन">Invitation</span> <span data-en="Videos" data-hi="वीडियो">Videos</span></h1>
+            <div class="wedding-hero-subtitle" data-en="Make Your Special Day Unforgettable" data-hi="शादी की यादगार बनाएं">Make Your Special Day Unforgettable</div>
+            <p class="wedding-hero-description" data-en="Create beautiful wedding announcement ads, invitation videos, and marriage celebration promos in Hindi, English, and all regional languages. Professional wedding advertising services across India." data-hi="हिंदी, अंग्रेजी और सभी भाषाओं में शादी के विज्ञापन और इनविटेशन वीडियो बनवाएं। पूरे भारत में सेवा।">Create beautiful wedding announcement ads, invitation videos, and marriage celebration promos in Hindi, English, and all regional languages. Professional wedding advertising services across India.</p>
+            <div class="wedding-hero-buttons">
+                <a href="https://wa.me/917355576785?text=I%20want%20to%20create%20a%20wedding%20invitation%20video" class="wedding-hero-btn wedding-hero-btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="Book Your Wedding Ad" data-hi="वेडिंग एड बुक करें">Book Your Wedding Ad</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demos - desktop horizontal, mobile vertical -->
+    <section class="video-showcase" id="video-demos">
+        <h2 class="video-section-title" data-en="Our Wedding Video Demos" data-hi="वेडिंग वीडियो डेमो">Our Wedding Video Demos</h2>
+        <p class="video-demos-hint" data-en="Click to watch in original format" data-hi="क्लिक करें - ओरिजिनल फॉर्मेट में देखें">Click to watch in original format</p>
+        <div class="video-demos-grid">
+            <div class="demo-card video-demo-card" data-video="male/Card Sample.mp4" data-label="Wedding Invitation Sample">
+                <video muted loop playsinline><source src="male/Card Sample.mp4" type="video/mp4"></video>
+                <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                <span class="card-label" data-en="Wedding Invitation Sample" data-hi="वेडिंग इनविटेशन सैंपल">Wedding Invitation Sample</span>
+            </div>
+            <div class="demo-card video-demo-card" data-video="img/Garima&Divyanshu.mp4" data-label="Garima & Divyanshu">
+                <video muted loop playsinline><source src="img/Garima&Divyanshu.mp4" type="video/mp4"></video>
+                <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                <span class="card-label">Garima & Divyanshu</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal - original vertical format on click -->
+    <div class="video-modal" id="videoModal">
+        <button class="video-modal-close" id="videoModalClose" aria-label="Close"><i class="fas fa-times"></i></button>
+        <div class="video-modal-inner">
+            <video id="modalVideo" controls playsinline></video>
+        </div>
+    </div>
+
+    <!-- About Block: The APS Story -->
+    <section class="about-block">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="img/Wedding poster.png" alt="APS Advertising Studio">
+            </div>
+            <div class="about-content">
+                <h2 data-en="The APS Story" data-hi="एपीएस की कहानी">The <span>APS</span> Story</h2>
+                <p data-en="APS Advertising isn't just a studio; we are storytellers who believe every wedding is a fairytale waiting to be told. Founded with a passion for capturing emotions, we've grown into India's most trusted wedding advertising partner. Our journey began with a simple idea: to help couples announce their love in the most beautiful way possible." data-hi="एपीएस सिर्फ एक स्टूडियो नहीं; हम कहानीकार हैं जो मानते हैं हर शादी एक कहानी है। भावनाओं को कैद करने के जुनून के साथ शुरू हुए, आज हम भारत के विश्वसनीय वेडिंग पार्टनर बन गए।">APS Advertising isn't just a studio; we are storytellers who believe every wedding is a fairytale waiting to be told. Founded with a passion for capturing emotions, we've grown into India's most trusted wedding advertising partner. Our journey began with a simple idea: to help couples announce their love in the most beautiful way possible.</p>
+                <p data-en="Today, we blend cinematic artistry with cultural richness. Whether it's a traditional shaadi card video or a modern celebrity-style wedding ad, we pour our heart into every frame. From the bustling streets of Delhi to the serene coasts of Kerala, we've helped thousands of couples make memories that last a lifetime." data-hi="आज हम सिनेमाई कला और संस्कृति को जोड़ते हैं। चाहे पारंपरिक शादी कार्ड वीडियो हो या मॉडर्न सेलिब्रिटी स्टाइल एड, हर फ्रेम में दिल लगाते हैं।">Today, we blend cinematic artistry with cultural richness. Whether it's a traditional shaadi card video or a modern celebrity-style wedding ad, we pour our heart into every frame. From the bustling streets of Delhi to the serene coasts of Kerala, we've helped thousands of couples make memories that last a lifetime.</p>
+                <div class="about-highlights">
+                    <div class="highlight-item"><i class="fas fa-language"></i><span data-en="15+ Languages" data-hi="15+ भाषाएं">15+ Languages</span></div>
+                    <div class="highlight-item"><i class="fas fa-clock"></i><span data-en="24h Delivery" data-hi="24 घंटे डिलीवरी">24h Delivery</span></div>
+                    <div class="highlight-item"><i class="fas fa-video"></i><span data-en="4K Resolution" data-hi="4K रेज़ोल्यूशन">4K Resolution</span></div>
+                    <div class="highlight-item"><i class="fas fa-heart"></i><span data-en="5000+ Couples" data-hi="5000+ जोड़े">5000+ Couples</span></div>
+                </div>
+                <p><strong data-en="✨ Serving all states:" data-hi="✨ पूरे भारत में सेवा:">✨ Serving all states:</strong> <span data-en="Delhi, Mumbai, Bangalore, Kolkata, Chennai, Hyderabad, Lucknow, Patna, Jaipur, Ahmedabad, and every city across India." data-hi="दिल्ली, मुंबई, बैंगलोर, कोलकाता, चेन्नई, हैदराबाद और पूरे भारत में।">Delhi, Mumbai, Bangalore, Kolkata, Chennai, Hyderabad, Lucknow, Patna, Jaipur, Ahmedabad, and every city across India.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="wedding-services">
+        <h2 class="section-title" data-en="Wedding Services We Offer" data-hi="वेडिंग सेवाएं">Wedding Services We Offer</h2>
+        <div class="services-grid">
+            <div class="service-card"><div class="service-card-content"><h3 data-en="Wedding Invitation Video" data-hi="वेडिंग इनविटेशन वीडियो">Wedding Invitation Video</h3><p data-en="Stunning digital wedding invitation with photos, music, animation." data-hi="फोटो, संगीत और एनिमेशन के साथ शानदार डिजिटल इनविटेशन।">Stunning digital wedding invitation with photos, music, animation.</p><a href="https://wa.me/917355576785?text=Book%20Wedding%20Invitation%20Video" class="service-book-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="Book Now" data-hi="बुक करें">Book Now</span></a></div><div class="service-icon"><i class="fas fa-ring"></i></div></div>
+            <div class="service-card"><div class="service-card-content"><h3 data-en="Wedding Highlight Video" data-hi="वेडिंग हाइलाइट वीडियो">Wedding Highlight Video</h3><p data-en="Cinematic highlights of your wedding day." data-hi="आपकी शादी के दिन की सिनेमाई झलक।">Cinematic highlights of your wedding day.</p><a href="https://wa.me/917355576785?text=Book%20Wedding%20Highlight%20Video" class="service-book-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="Book Now" data-hi="बुक करें">Book Now</span></a></div><div class="service-icon"><i class="fas fa-heart"></i></div></div>
+            <div class="service-card"><div class="service-card-content"><h3 data-en="Wedding Song & Video" data-hi="वेडिंग सॉन्ग और वीडियो">Wedding Song & Video</h3><p data-en="Custom wedding song with full video production." data-hi="पूर्ण वीडियो प्रोडक्शन के साथ अपना वेडिंग सॉन्ग।">Custom wedding song with full video production.</p><a href="https://wa.me/917355576785?text=Book%20Wedding%20Song%20Video" class="service-book-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="Book Now" data-hi="बुक करें">Book Now</span></a></div><div class="service-icon"><i class="fas fa-music"></i></div></div>
+            <div class="service-card"><div class="service-card-content"><h3 data-en="Pre-Wedding Shoot Ad" data-hi="प्री-वेडिंग शूट एड">Pre-Wedding Shoot Ad</h3><p data-en="Engaging ad from your pre-wedding shoot." data-hi="प्री-वेडिंग शूट से आकर्षक विज्ञापन।">Engaging ad from your pre-wedding shoot.</p><a href="https://wa.me/917355576785?text=Book%20Pre-Wedding%20Ad" class="service-book-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="Book Now" data-hi="बुक करें">Book Now</span></a></div><div class="service-icon"><i class="fas fa-camera-retro"></i></div></div>
+            <div class="service-card"><div class="service-card-content"><h3 data-en="Wedding Promo Ad" data-hi="वेडिंग प्रोमो एड">Wedding Promo Ad</h3><p data-en="Promote your wedding or wedding business." data-hi="अपनी शादी या व्यवसाय को प्रोमोट करें।">Promote your wedding or wedding business.</p><a href="https://wa.me/917355576785?text=Book%20Wedding%20Promo%20Ad" class="service-book-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="Book Now" data-hi="बुक करें">Book Now</span></a></div><div class="service-icon"><i class="fas fa-bullhorn"></i></div></div>
+            <div class="service-card"><div class="service-card-content"><h3 data-en="Celebrity Style Wedding Ad" data-hi="सेलिब्रिटी स्टाइल वेडिंग एड">Celebrity Style Wedding Ad</h3><p data-en="Bollywood-style announcement with voice-over." data-hi="वॉइस-ओवर के साथ बॉलीवुड स्टाइल घोषणा।">Bollywood-style announcement with voice-over.</p><a href="https://wa.me/917355576785?text=Book%20Celebrity%20Wedding%20Ad" class="service-book-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="Book Now" data-hi="बुक करें">Book Now</span></a></div><div class="service-icon"><i class="fas fa-star"></i></div></div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY SLIDER (right to left infinite) ===== -->
+    <section class="gallery-slider-section" id="gallery-slider">
+        <div class="slider-container">
+            <h2 class="slider-title" data-en="Our Wedding Gallery" data-hi="हमारी वेडिंग गैलरी">Our Wedding Gallery</h2>
+            <div class="slider-track">
+                <div class="slide"><img src="img/wedding image.jpeg" alt="Wedding Decoration"></div>
+                <div class="slide"><img src="img/Wedding poster3.png" alt="Bridal Shoot"></div>
+                <div class="slide"><img src="img/Wedding poster2.png" alt="Groom Entry"></div>
+                <div class="slide"><img src="img/Wedding poster.png" alt="Wedding Mandap"></div>
+                <div class="slide"><img src="img/wedding image.jpeg" alt="Wedding Decoration"></div>
+                <div class="slide"><img src="img/Wedding poster3.png" alt="Bridal Shoot"></div>
+                <div class="slide"><img src="img/Wedding poster2.png" alt="Groom Entry"></div>
+                <div class="slide"><img src="img/Wedding poster.png" alt="Wedding Mandap"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why APS -->
+    <section class="why-aps">
+        <div class="why-aps-container">
+            <h2 class="section-title" data-en="Why APS Advertising?" data-hi="क्यों एपीएस विज्ञापन?">Why APS Advertising?</h2>
+            <p class="why-aps-intro" data-en="We don't just make videos; we create heirlooms. Here's why thousands of couples trust us." data-hi="हम सिर्फ वीडियो नहीं बनाते; यादगार बनाते हैं। हज़ारों जोड़े हम पर भरोसा क्यों करते हैं।" style="text-align:center; max-width:800px; margin:0 auto; color:rgba(255,255,255,0.9);">We don't just make videos; we create heirlooms. Here's why thousands of couples trust us.</p>
+            <div class="why-grid">
+                <div class="why-item"><div class="why-item-content"><h3 data-en="Cinematic Excellence" data-hi="सिनेमाई उत्कृष्टता">Cinematic Excellence</h3><p data-en="4K ultra-HD with professional color grading." data-hi="प्रोफेशनल कलर ग्रेडिंग के साथ 4K उल्ट्रा-एचडी।">4K ultra-HD with professional color grading.</p></div><i class="fas fa-film"></i></div>
+                <div class="why-item"><div class="why-item-content"><h3 data-en="Bollywood Voiceovers" data-hi="बॉलीवुड वॉइसओवर">Bollywood Voiceovers</h3><p data-en="15+ languages, professional artists." data-hi="15+ भाषाएं, प्रोफेशनल आर्टिस्ट।">15+ languages, professional artists.</p></div><i class="fas fa-language"></i></div>
+                <div class="why-item"><div class="why-item-content"><h3 data-en="Quick Delivery" data-hi="त्वरित डिलीवरी">Quick Delivery</h3><p data-en="Get your video in 24 hours. Express: 5-6 hours." data-hi="24 घंटे में वीडियो मिलेगा। एक्सप्रेस: 5-6 घंटे।">Get your video in 24 hours. Express: 5-6 hours.</p></div><i class="fas fa-clock"></i></div>
+                <div class="why-item"><div class="why-item-content"><h3 data-en="Free Consultation" data-hi="मुफ्त परामर्श">Free Consultation</h3><p data-en="Discuss your vision at no cost." data-hi="बिना किसी शुल्क के विचार साझा करें।">Discuss your vision at no cost.</p></div><i class="fas fa-comments"></i></div>
+                <div class="why-item"><div class="why-item-content"><h3 data-en="Affordable Luxury" data-hi="किफायती लक्ज़री">Affordable Luxury</h3><p data-en="Premium quality at great value." data-hi="बेहतरीन गुणवत्ता, सही कीमत।">Premium quality at great value.</p></div><i class="fas fa-indian-rupee-sign"></i></div>
+                <div class="why-item"><div class="why-item-content"><h3 data-en="Pan-India Reach" data-hi="पूरे भारत में सेवा">Pan-India Reach</h3><p data-en="From Kashmir to Kanyakumari." data-hi="कश्मीर से कन्याकुमारी तक।">From Kashmir to Kanyakumari.</p></div><i class="fas fa-map-marker-alt"></i></div>
+                <div class="why-item"><div class="why-item-content"><h3 data-en="Emotional Connect" data-hi="भावनात्मक जुड़ाव">Emotional Connect</h3><p data-en="Your love story, our passion." data-hi="आपकी प्यार की कहानी, हमारा जुनून।">Your love story, our passion.</p></div><i class="fas fa-heart"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="wedding-testimonials">
+        <h2 class="section-title" data-en="Happy Couples" data-hi="खुश जोड़े">Happy Couples</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card"><div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text" data-en="&quot;APS Advertising made our wedding invitation video absolutely stunning! Everyone loved it.&quot;" data-hi="&quot;एपीएस ने हमारा वेडिंग वीडियो बहुत शानदार बनाया! सबको पसंद आया।&quot;">"APS Advertising made our wedding invitation video absolutely stunning! Everyone loved it."</p><div class="author-info"><h4>Priya Sharma</h4><p>Delhi</p></div></div>
+            <div class="testimonial-card"><div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text" data-en="&quot;The video went viral in our community! Highly recommended.&quot;" data-hi="&quot;वीडियो हमारे समुदाय में वायरल हो गया! ज़रूर बनवाएं।&quot;">"The video went viral in our community! Highly recommended."</p><div class="author-info"><h4>Rajesh Kumar</h4><p>Lucknow</p></div></div>
+            <div class="testimonial-card"><div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text" data-en="&quot;Beautiful wedding song with our photos. Best investment!&quot;" data-hi="&quot;हमारी फोटो के साथ खूबसूरत वेडिंग सॉन्ग। सबसे अच्छा निवेश!&quot;">"Beautiful wedding song with our photos. Best investment!"</p><div class="author-info"><h4>Anjali & Vikram</h4><p>Mumbai</p></div></div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="wedding-faq">
+        <h2 class="section-title" data-en="Frequently Asked Questions" data-hi="अक्सर पूछे जाने वाले प्रश्न">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item"><div class="faq-question"><span data-en="How long does it take?" data-hi="कितना समय लगता है?">How long does it take?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" data-en="Most videos within 24-48 hours." data-hi="ज़्यादातर वीडियो 24-48 घंटे में तैयार।">Most videos within 24-48 hours.</div></div>
+            <div class="faq-item"><div class="faq-question"><span data-en="Which languages?" data-hi="कौन सी भाषाएं?">Which languages?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" data-en="Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati, Punjabi, and more." data-hi="हिंदी, अंग्रेजी, तमिल, तेलुगू, बंगाली, मराठी, गुजराती, पंजाबी और अन्य।">Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati, Punjabi, and more.</div></div>
+            <div class="faq-item"><div class="faq-question"><span data-en="Can I see a sample?" data-hi="क्या सैंपल देख सकते हैं?">Can I see a sample?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" data-en="Yes, videos above are samples. Contact us for more." data-hi="हाँ, ऊपर वीडियो सैंपल हैं। अधिक जानकारी के लिए संपर्क करें।">Yes, videos above are samples. Contact us for more.</div></div>
+            <div class="faq-item"><div class="faq-question"><span data-en="Deliver to all cities?" data-hi="सभी शहरों में डिलीवरी?">Deliver to all cities?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" data-en="Absolutely, pan-India digital delivery." data-hi="हाँ, पूरे भारत में डिजिटल डिलीवरी।">Absolutely, pan-India digital delivery.</div></div>
+            <div class="faq-item"><div class="faq-question"><span data-en="What do I need to provide?" data-hi="क्या चीज़ें चाहिए?">What do I need to provide?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer" data-en="Photos, names, date, venue, music preference." data-hi="फोटो, नाम, तारीख, वेन्यू, संगीत पसंद।">Photos, names, date, venue, music preference.</div></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="wedding-cta" id="contact">
+        <div class="cta-container">
+            <h2><span data-en="Ready to Create Your " data-hi="अपना वेडिंग एड बनाने के लिए तैयार? ">Ready to Create Your </span><span data-en="Wedding Ad?" data-hi="वेडिंग एड?">Wedding Ad?</span></h2>
+            <p><strong data-en="Free consultation." data-hi="मुफ्त परामर्श।">Free consultation.</strong> <span data-en="Get your video in just 24 hours! 5-6 hour express delivery available." data-hi="24 घंटे में वीडियो मिलेगा! 5-6 घंटे एक्सप्रेस डिलीवरी उपलब्ध।">Get your video in just 24 hours! 5-6 hour express delivery available.</span></p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/917355576785?text=Hello%20APS%20Advertising,%20I'm%20interested%20in%20creating%20a%20wedding%20ad." class="cta-btn cta-btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="WhatsApp Now" data-hi="अभी व्हाट्सएप करें">WhatsApp Now</span></a>
+                <a href="tel:7355576785" class="cta-btn cta-btn-call"><i class="fas fa-phone"></i> <span data-en="Call: 7355576785" data-hi="कॉल: 7355576785">Call: 7355576785</span></a>
+            </div>
+            <p style="margin-top:20px;"><i class="fas fa-clock"></i> 24/7 | <i class="fas fa-language"></i> हिंदी, English</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>APS Advertising</h3><p data-en="Leading advertising agency specializing in wedding ads, political campaigns, and brand development across India." data-hi="वेडिंग एड्स, राजनीतिक अभियान और ब्रांड विकास में विशेषज्ञ एजेंसी।">Leading advertising agency specializing in wedding ads, political campaigns, and brand development across India.</p><div class="social-icons"><a href="https://www.facebook.com/people/APS-Advertising/61564161881854/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/aps.advertising" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://www.youtube.com/@apsadvertising" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="https://wa.me/917355576785" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div></div>
+            <div class="footer-section"><h3 data-en="Quick Links" data-hi="जल्दी लिंक">Quick Links</h3><ul><li><a href="index.html" data-en="Home" data-hi="होम">Home</a></li><li><a href="wwf.html" data-en="What We Offer" data-hi="हम क्या प्रदान करते हैं">What We Offer</a></li><li><a href="demos.html" data-en="How We Work" data-hi="हम कैसे काम करते हैं">How We Work</a></li><li><a href="about.html" data-en="Who We Are" data-hi="हम कौन हैं">Who We Are</a></li><li><a href="WeddingAds-and-Invitation-Videos.html" style="color:var(--primary-red);" data-en="Wedding Ads" data-hi="वेडिंग एड्स">Wedding Ads</a></li><li><a href="SchoolAdvertisement.html" data-en="School Advertisement" data-hi="स्कूल विज्ञापन">School Advertisement</a></li><li><a href="partners.html" data-en="Partners" data-hi="साझेदार">Partners</a></li><li><a href="feedback.html" data-en="Feedback" data-hi="राय">Feedback</a></li><li><a href="contact.html" data-en="Contact Us" data-hi="संपर्क करें">Contact Us</a></li></ul></div>
+            <div class="footer-section"><h3 data-en="Contact Us" data-hi="संपर्क करें">Contact Us</h3><ul><li><a href="tel:7355576785"><i class="fas fa-phone"></i> 7355576785</a></li><li><a href="mailto:apsadvertisingpr@gmail.com"><i class="fas fa-envelope"></i> apsadvertisingpr@gmail.com</a></li><li><a href="https://wa.me/917355576785" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li><li><i class="fas fa-map-marker-alt"></i> <span data-en="Serving Across India" data-hi="पूरे भारत में सेवा">Serving Across India</span></li></ul></div>
+        </div>
+        <div class="copyright"><p>© 2024 APS Advertising. <span data-en="All Rights Reserved." data-hi="सर्वाधिकार सुरक्षित।">All Rights Reserved.</span></p><p><span data-en="Website Designed by " data-hi="वेबसाइट डिज़ाइन: ">Website Designed by </span><a href="shivangi-chauhan.html">Shivangi Chauhan</a></p></div>
+    </footer>
+
+    <script>
+        // mobile menu
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const close = document.getElementById('mobileMenuClose');
+            const overlay = document.getElementById('menuOverlay');
+            const body = document.body;
+            function open() { menu.classList.add('active'); overlay.classList.add('active'); body.classList.add('menu-open'); }
+            function closeMenu() { menu.classList.remove('active'); overlay.classList.remove('active'); body.classList.remove('menu-open'); }
+            if(btn) btn.addEventListener('click', (e) => { e.preventDefault(); open(); });
+            if(close) close.addEventListener('click', (e) => { e.preventDefault(); closeMenu(); });
+            if(overlay) overlay.addEventListener('click', closeMenu);
+            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    if(href.startsWith('#')) { const target = document.querySelector(href); if(target){ closeMenu(); setTimeout(()=>{ window.scrollTo({top:target.offsetTop-60, behavior:'smooth'}); },300); } }
+                    else { window.location.href = href; }
+                });
+            });
+        }
+        // faq
+        function setupFAQ() {
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const wasOpen = this.classList.contains('active');
+                    document.querySelectorAll('.faq-question.active').forEach(x => x.classList.remove('active'));
+                    document.querySelectorAll('.faq-answer.active').forEach(a => a.classList.remove('active'));
+                    if (!wasOpen) {
+                        this.classList.add('active');
+                        if (answer) answer.classList.add('active');
+                    }
+                });
+            });
+        }
+        // video modal - vertical format
+        function setupVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            const closeBtn = document.getElementById('videoModalClose');
+            document.querySelectorAll('.video-demo-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const src = this.dataset.video || this.querySelector('video source')?.src;
+                    if (src && modalVideo) {
+                        modalVideo.src = src;
+                        modalVideo.load();
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                        modalVideo.play();
+                    }
+                });
+            });
+            function closeModal() {
+                if (modal) modal.classList.remove('active');
+                if (modalVideo) { modalVideo.pause(); modalVideo.src = ''; }
+                document.body.style.overflow = '';
+            }
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (modal) modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+        }
+        window.addEventListener('scroll', ()=>{
+            const navbar = document.getElementById('navbar');
+            if(navbar) window.scrollY > 50 ? navbar.classList.add('scrolled') : navbar.classList.remove('scrolled');
+        });
+        // language sync
+        const langSelectors = document.querySelectorAll('.language-selector, .mobile-language-selector');
+        langSelectors.forEach(sel => sel.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            langSelectors.forEach(s => s.value = lang);
+            localStorage.setItem('preferredLanguage', lang);
+        }));
+        const saved = localStorage.getItem('preferredLanguage') || 'en';
+        langSelectors.forEach(s => s.value = saved);
+        // smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e){
+                const href = this.getAttribute('href');
+                if(href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if(target) window.scrollTo({top: target.offsetTop-60, behavior:'smooth'});
+            });
+        });
+        document.addEventListener('DOMContentLoaded', ()=>{ setupMobileMenu(); setupFAQ(); setupVideoModal(); });
+    </script>
+</body>
+</html>

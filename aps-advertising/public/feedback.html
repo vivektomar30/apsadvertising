@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO & Performance -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback | APS Advertising - Client Testimonials & Reviews</title>
+    <meta name="description"
+        content="APS Advertising Customer Feedback - Share your experience, read client testimonials, and help us improve our advertising services. Your feedback matters to us.">
+    <meta name="keywords"
+        content="APS Advertising, customer feedback, client testimonials, advertising agency reviews, marketing feedback, customer experience">
+    <meta name="author" content="APS Advertising">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="APS Advertising - Customer Feedback & Testimonials">
+    <meta property="og:description"
+        content="Share your experience with APS Advertising. Read what our clients say about our advertising and marketing services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://apsadvertising.com/feedback.html">
+    <meta property="og:image" content="https://apsadvertising.com/public/img/og-feedback.jpg">
+    <meta name="theme-color" content="#FF003C">
+
+    <!-- Performance Optimizations -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap">
+    <link rel="preload" as="image" href="public/img/APS Advertising Logo (1).png">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Customer Feedback - APS Advertising",
+        "description": "Customer feedback and testimonials for APS Advertising services",
+        "publisher": {
+            "@type": "Organization",
+            "name": "APS Advertising",
+            "url": "https://apsadvertising.com"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "850",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+
+    <!-- All CSS in One File -->
+    <style>
+        /* ===== CRITICAL CSS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #FF003C;
+            --accent-red: #FF3366;
+            --primary-black: #000000;
+            --dark-grey: #1A1A1A;
+            --off-white: #F5F5F5;
+            --pure-white: #FFFFFF;
+            --gradient-red: linear-gradient(135deg, #FF003C 0%, #FF3366 100%);
+            --gradient-dark: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--primary-black);
+            color: var(--off-white);
+            overflow-x: hidden;
+            line-height: 1.6;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px 16px;
+            z-index: 1001;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+
+        /* Focus Styles */
+        :focus {
+            outline: 3px solid var(--primary-red);
+            outline-offset: 2px;
+        }
+
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--primary-red);
+            outline-offset: 2px;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top: 5px solid var(--primary-red);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid var(--primary-red);
+            min-height: 80px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            filter: drop-shadow(0 0 10px rgba(255, 0, 60, 0.35));
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--gradient-red);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .back-home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-red);
+            color: var(--pure-white);
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-red);
+        }
+
+        .back-home-btn:hover {
+            background: transparent;
+            color: var(--primary-red);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(210, 4, 45, 0.3);
+        }
+
+        /* Hero Section */
+        .feedback-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 5% 50px;
+            position: relative;
+            overflow: hidden;
+            background: var(--gradient-dark);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--pure-white);
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: var(--off-white);
+            opacity: 0.9;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-red);
+        }
+
+        .stat-number {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 900;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--off-white);
+            opacity: 0.9;
+        }
+
+        /* WhatsApp Floating Icon - Official Style */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            z-index: 10000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: floatWhatsApp 3s ease-in-out infinite;
+            filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes floatWhatsApp {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+        }
+
+        @media (max-width: 576px) {
+            .feedback-hero {
+                padding: 80px 5% 60px !important;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* ===== NON-CRITICAL CSS ===== */
+        /* Feedback Container */
+        .feedback-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        @media (max-width: 992px) {
+            .feedback-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Feedback Form */
+        .feedback-form-container {
+            background: rgba(26, 26, 26, 0.9);
+            border-radius: 25px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feedback-form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-red);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--pure-white);
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            color: var(--off-white);
+            opacity: 0.9;
+        }
+
+        .feedback-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 18px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--off-white);
+            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: var(--primary-red);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Star Rating */
+        .rating-container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .rating-title {
+            font-size: 1.2rem;
+            color: var(--pure-white);
+            margin-bottom: 20px;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover~label,
+        .star-rating input:checked~label {
+            color: #FFD700;
+        }
+
+        .rating-text {
+            margin-top: 15px;
+            color: var(--off-white);
+            font-size: 1.1rem;
+            min-height: 24px;
+        }
+
+        /* Service Selection */
+        .service-selection {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .service-selection {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .service-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .service-option.selected {
+            background: rgba(255, 0, 60, 0.1);
+            border-color: var(--primary-red);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+        }
+
+        .service-name {
+            font-size: 0.9rem;
+            color: var(--off-white);
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: var(--gradient-red);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 0, 60, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* Feedback Display */
+        .feedback-display-container {
+            background: rgba(26, 26, 26, 0.9);
+            border-radius: 25px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feedback-display-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-red);
+        }
+
+        /* Feedback Filter */
+        .feedback-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 12px 25px;
+            color: var(--off-white);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border: none;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .filter-btn.active {
+            background: var(--gradient-red);
+            border-color: var(--primary-red);
+        }
+
+        /* Feedback Cards */
+        .feedback-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .feedback-cards::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .feedback-cards::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+
+        .feedback-cards::-webkit-scrollbar-thumb {
+            background: var(--primary-red);
+            border-radius: 3px;
+        }
+
+        .feedback-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feedback-card:hover {
+            border-color: var(--primary-red);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .user-details h4 {
+            font-size: 1.2rem;
+            color: var(--pure-white);
+            margin-bottom: 5px;
+        }
+
+        .user-service {
+            font-size: 0.9rem;
+            color: var(--off-white);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .feedback-rating {
+            display: flex;
+            gap: 5px;
+        }
+
+        .rating-star {
+            color: #FFD700;
+            font-size: 1.1rem;
+        }
+
+        .rating-star.empty {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .feedback-content {
+            margin-bottom: 20px;
+        }
+
+        .feedback-text {
+            color: var(--off-white);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feedback-date {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .feedback-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .action-btn {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+        }
+
+        .action-btn:hover {
+            color: var(--pure-white);
+        }
+
+        .action-btn.liked {
+            color: var(--primary-red);
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 5%;
+        }
+
+        .testimonials-container {
+            background: rgba(26, 26, 26, 0.9);
+            border-radius: 25px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonials-header h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--pure-white);
+            margin-bottom: 15px;
+        }
+
+        .testimonials-header p {
+            color: var(--off-white);
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .testimonials-slider {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 20px;
+        }
+
+        .testimonial-content {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-text {
+            font-size: 1.2rem;
+            color: var(--off-white);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .author-avatar {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .author-info h4 {
+            font-size: 1.4rem;
+            color: var(--pure-white);
+            margin-bottom: 5px;
+        }
+
+        .author-title {
+            color: var(--off-white);
+            font-size: 1.1rem;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .slider-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--off-white);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            border: none;
+        }
+
+        .slider-btn:hover {
+            background: var(--primary-red);
+            border-color: var(--primary-red);
+        }
+
+        /* CTA Section */
+        .cta-feedback {
+            text-align: center;
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 80px 40px;
+            background: rgba(255, 0, 60, 0.05);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 0, 60, 0.2);
+        }
+
+        .cta-feedback h3 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--pure-white);
+            margin-bottom: 20px;
+        }
+
+        .cta-feedback p {
+            font-size: 1.2rem;
+            color: var(--off-white);
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 18px 35px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            border: none;
+        }
+
+        .cta-btn.primary {
+            background: var(--gradient-red);
+            color: white;
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            color: var(--off-white);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 0, 60, 0.3);
+        }
+
+        .cta-btn.secondary:hover {
+            border-color: var(--primary-red);
+            color: var(--pure-white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gradient-dark);
+            padding: 80px 5% 30px;
+            border-top: 3px solid var(--primary-red);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 60px;
+            margin-bottom: 70px;
+        }
+
+        .footer-section h3 {
+            color: var(--pure-white);
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-red);
+        }
+
+        .footer-section p {
+            color: var(--off-white);
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--off-white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .footer-links i {
+            color: var(--primary-red);
+            width: 20px;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary-red);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--off-white);
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .copyright a {
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+
+        /* Success Message */
+        .success-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(26, 26, 26, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid var(--primary-red);
+            text-align: center;
+            z-index: 10000;
+            display: none;
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .success-message h3 {
+            font-size: 1.8rem;
+            color: var(--pure-white);
+            margin-bottom: 15px;
+        }
+
+        .success-message p {
+            color: var(--off-white);
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .close-success {
+            background: var(--gradient-red);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-success:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Error Message */
+        .error-message {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: var(--primary-red);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10000;
+            animation: slideInRight 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Utility Classes */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 5%;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .feedback-container,
+            .testimonials-section {
+                padding: 60px 5%;
+            }
+
+            .feedback-form-container,
+            .feedback-display-container,
+            .testimonials-container {
+                padding: 30px;
+            }
+
+            .stats-container {
+                gap: 20px;
+            }
+
+            .stat-item {
+                padding: 20px;
+            }
+
+            .service-selection {
+                grid-template-columns: 1fr;
+            }
+
+            .feedback-filter {
+                gap: 10px;
+            }
+
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .cta-feedback {
+                padding: 40px 20px;
+                margin: 60px auto;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .form-header h2,
+            .display-header h2,
+            .testimonials-header h2,
+            .cta-feedback h3 {
+                font-size: 1.8rem;
+            }
+
+            .feedback-form-container,
+            .feedback-display-container,
+            .testimonials-container {
+                padding: 20px;
+            }
+
+            .form-input,
+            .form-textarea {
+                padding: 15px 20px;
+            }
+
+            .star-rating label {
+                font-size: 2rem;
+            }
+
+            .submit-btn {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+
+            .feedback-card {
+                padding: 20px;
+            }
+
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        <h3>Thank You for Your Feedback!</h3>
+        <p>Your valuable feedback has been submitted successfully.</p>
+        <button class="close-success" onclick="closeSuccessMessage()">Close</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="logo-container" aria-label="APS Advertising Homepage">
+            <img src="img/APS Advertising Logo (1).png" alt="APS Advertising Logo" class="logo-img" width="60"
+                height="60" loading="eager" decoding="async">
+            <div class="logo-text">APS Advertising</div>
+        </a>
+        <div class="nav-actions">
+            <a href="index.html" class="back-home-btn" aria-label="Return to homepage">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content" class="feedback-hero" aria-labelledby="page-title">
+        <div class="hero-content">
+            <h1 id="page-title">SHARE YOUR EXPERIENCE</h1>
+            <p>Your feedback helps us improve and serve you better. Share your experience with APS Advertising and help
+                other clients make informed decisions.</p>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalFeedback" aria-label="850 plus feedback received">850+</div>
+                    <div class="stat-label">Feedback Received</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.8/5</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">97%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Feedback Container -->
+    <section class="feedback-container" aria-labelledby="feedback-heading">
+        <!-- Feedback Form -->
+        <div class="feedback-form-container">
+            <div class="form-header">
+                <h2 id="feedback-heading">Share Your Feedback</h2>
+                <p>Tell us about your experience with APS Advertising</p>
+            </div>
+            <form class="feedback-form" id="feedbackForm" aria-label="Feedback submission form">
+                <div class="form-group">
+                    <label for="name" class="visually-hidden">Your Name</label>
+                    <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="visually-hidden">Email Address (Optional)</label>
+                    <input type="email" id="email" class="form-input" placeholder="Email Address (Optional)">
+                </div>
+
+                <div class="rating-container">
+                    <div class="rating-title">Rate Your Experience</div>
+                    <div class="star-rating" role="radiogroup" aria-label="Rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" title="Excellent">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" title="Good">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" title="Average">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" title="Below Average">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" title="Poor">★</label>
+                    </div>
+                    <div class="rating-text" id="ratingText" aria-live="polite">Select a rating</div>
+                </div>
+
+                <div class="form-group">
+                    <div class="rating-title">Service Used</div>
+                    <div class="service-selection" id="serviceSelection" role="radiogroup"
+                        aria-label="Service selection">
+                        <div class="service-option" data-service="audio" role="radio" aria-checked="false">
+                            <div class="service-icon">
+                                <i class="fas fa-microphone-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="service-name">Audio Advertising</div>
+                        </div>
+                        <div class="service-option" data-service="video" role="radio" aria-checked="false">
+                            <div class="service-icon">
+                                <i class="fas fa-video" aria-hidden="true"></i>
+                            </div>
+                            <div class="service-name">Video Production</div>
+                        </div>
+                        <div class="service-option" data-service="political" role="radio" aria-checked="false">
+                            <div class="service-icon">
+                                <i class="fas fa-landmark" aria-hidden="true"></i>
+                            </div>
+                            <div class="service-name">Political Campaigns</div>
+                        </div>
+                        <div class="service-option" data-service="website" role="radio" aria-checked="false">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                            </div>
+                            <div class="service-name">Website Services</div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="service" name="service" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback" class="visually-hidden">Your Feedback</label>
+                    <textarea id="feedback" class="form-textarea" placeholder="Your Feedback / Comments" rows="5"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" aria-label="Submit feedback">
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                    <span>Submit Feedback</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Feedback Display -->
+        <div class="feedback-display-container">
+            <div class="display-header">
+                <h2>Recent Feedback</h2>
+                <p>See what our clients are saying about us</p>
+            </div>
+
+            <div class="feedback-filter" role="tablist" aria-label="Filter feedback by">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button class="filter-btn" data-filter="5" role="tab" aria-selected="false">5 Stars</button>
+                <button class="filter-btn" data-filter="4" role="tab" aria-selected="false">4 Stars</button>
+                <button class="filter-btn" data-filter="3" role="tab" aria-selected="false">3 Stars</button>
+                <button class="filter-btn" data-filter="audio" role="tab" aria-selected="false">Audio</button>
+                <button class="filter-btn" data-filter="video" role="tab" aria-selected="false">Video</button>
+            </div>
+
+            <div class="feedback-cards" id="feedbackCards" aria-live="polite">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" aria-labelledby="testimonials-heading">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <h2 id="testimonials-heading">Client Testimonials</h2>
+                <p>Read what our satisfied clients have to say</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevTestimonial" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="slider-btn" id="nextTestimonial" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-feedback" aria-labelledby="cta-heading">
+        <h3 id="cta-heading">Have More to Share?</h3>
+        <p>Your feedback is invaluable to us. Help us continue providing excellent service.</p>
+        <div class="cta-buttons">
+            <button class="cta-btn primary" onclick="scrollToForm()">
+                <i class="fas fa-comment-alt" aria-hidden="true"></i> Write Another Feedback
+            </button>
+            <a href="contact.html" class="cta-btn secondary">
+                <i class="fas fa-headset" aria-hidden="true"></i> Contact Support
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>APS Advertising</h3>
+                <p>Leading advertising agency specializing in innovative marketing solutions.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/apsadvertising" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://instagram.com/aps.advertising" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://youtube.com/apsadvertising" target="_blank" rel="noopener noreferrer"
+                        aria-label="YouTube">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:apsadvertisingpr@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-briefcase" aria-hidden="true"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone" aria-hidden="true"></i> Contact</a></li>
+                    <li><a href="feedback.html" aria-current="page"><i class="fas fa-comments" aria-hidden="true"></i>
+                            Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:+917355576785"><i class="fas fa-phone" aria-hidden="true"></i> +91 73555 76785</a>
+                    </li>
+                    <li><a href="mailto:apsadvertisingpr@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>
+                            Email</a></li>
+                    <li><a href="https://wa.me/917355576785" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Serving Across India</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© <span id="currentYear"></span> APS Advertising. All Rights Reserved.</p>
+            <p>Website Designed by <a href="shivangi-chauhan.html" target="_blank" rel="noopener noreferrer">Shivangi
+                    Chauhan</a></p>
+        </div>
+    </footer>
+
+    <!-- All JavaScript in One File -->
+    <script>
+        // ===== MAIN FEEDBACK APPLICATION =====
+        (function () {
+            'use strict';
+
+            // ===== CONFIGURATION =====
+            const API_BASE_URL = window.location.hostname === 'localhost' ||
+                window.location.hostname === '127.0.0.1'
+                ? 'http://localhost:5000/api'
+                : '/api';
+
+            // ===== STORAGE MANAGEMENT =====
+            class StorageManager {
+                static get(key) {
+                    try {
+                        return JSON.parse(localStorage.getItem(key)) || [];
+                    } catch {
+                        return [];
+                    }
+                }
+
+                static set(key, value) {
+                    try {
+                        localStorage.setItem(key, JSON.stringify(value));
+                        return true;
+                    } catch {
+                        return false;
+                    }
+                }
+            }
+
+            // ===== FEEDBACK MANAGER =====
+            class FeedbackManager {
+                constructor() {
+                    this.storageKey = 'apsFeedback';
+                }
+
+                async load() {
+                    try {
+                        const response = await fetch(`${API_BASE_URL}/feedback`);
+                        if (response.ok) {
+                            const data = await response.json();
+                            return data.data || this.getFromStorage();
+                        }
+                    } catch {
+                        return this.getFromStorage();
+                    }
+                    return [];
+                }
+
+                async save(feedback) {
+                    // Try backend API first
+                    try {
+                        const response = await fetch(`${API_BASE_URL}/feedback`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(feedback)
+                        });
+
+                        if (response.ok) {
+                            console.log('Feedback saved to backend');
+                        }
+                    } catch (error) {
+                        console.log('Using local storage fallback');
+                    }
+
+                    // Always store locally for immediate display
+                    const existing = this.getFromStorage();
+                    const newFeedback = {
+                        ...feedback,
+                        id: Date.now(),
+                        date: new Date().toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric'
+                        }),
+                        likes: 0,
+                        liked: false
+                    };
+
+                    existing.unshift(newFeedback);
+                    StorageManager.set(this.storageKey, existing);
+
+                    return newFeedback;
+                }
+
+                async toggleLike(id) {
+                    const feedback = this.getFromStorage();
+                    const index = feedback.findIndex(f => f.id === id);
+
+                    if (index !== -1) {
+                        feedback[index].liked = !feedback[index].liked;
+                        feedback[index].likes += feedback[index].liked ? 1 : -1;
+                        StorageManager.set(this.storageKey, feedback);
+                        return feedback[index];
+                    }
+                    return null;
+                }
+
+                getFromStorage() {
+                    return StorageManager.get(this.storageKey);
+                }
+            }
+
+            // ===== UI MANAGER =====
+            class UIManager {
+                constructor() {
+                    this.feedbackManager = new FeedbackManager();
+                    this.currentFilter = 'all';
+                }
+
+                init() {
+                    this.initStarRating();
+                    this.initServiceSelection();
+                    this.initFeedbackFilter();
+                    this.initTestimonialsSlider();
+                    this.initForm();
+                    this.initEventListeners();
+
+                    // Load initial data
+                    this.loadFeedback();
+
+                    // Set current year
+                    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+                    // Remove loading overlay
+                    this.hideLoading();
+                }
+
+                initStarRating() {
+                    const ratingTexts = {
+                        1: "Poor - We're sorry to hear that",
+                        2: "Below Average - We'll improve",
+                        3: "Average - Thanks for your feedback",
+                        4: "Good - Glad you liked our service",
+                        5: "Excellent - Thank you for the perfect rating!"
+                    };
+
+                    document.querySelectorAll('.star-rating input').forEach(star => {
+                        star.addEventListener('change', function () {
+                            const text = ratingTexts[this.value] || `Rated ${this.value} stars`;
+                            document.getElementById('ratingText').textContent = text;
+                        });
+                    });
+                }
+
+                initServiceSelection() {
+                    const options = document.querySelectorAll('.service-option');
+                    const input = document.getElementById('service');
+
+                    options.forEach(option => {
+                        option.addEventListener('click', function () {
+                            options.forEach(opt => {
+                                opt.classList.remove('selected');
+                                opt.setAttribute('aria-checked', 'false');
+                            });
+
+                            this.classList.add('selected');
+                            this.setAttribute('aria-checked', 'true');
+                            input.value = this.dataset.service;
+                        });
+                    });
+
+                    // Select first by default
+                    if (options.length > 0 && !input.value) {
+                        options[0].click();
+                    }
+                }
+
+                initFeedbackFilter() {
+                    const buttons = document.querySelectorAll('.filter-btn');
+
+                    buttons.forEach(btn => {
+                        btn.addEventListener('click', async () => {
+                            buttons.forEach(b => {
+                                b.classList.remove('active');
+                                b.setAttribute('aria-selected', 'false');
+                            });
+
+                            btn.classList.add('active');
+                            btn.setAttribute('aria-selected', 'true');
+                            this.currentFilter = btn.dataset.filter;
+
+                            await this.loadFeedback();
+                        });
+                    });
+                }
+
+                initTestimonialsSlider() {
+                    const testimonials = [
+                        {
+                            text: "Working with APS Advertising was a game-changer for our political campaign. Their innovative strategies and attention to detail helped us connect with voters on a deeper level.",
+                            author: "Mr. Sharma",
+                            title: "Political Campaign Manager",
+                            initials: "MS"
+                        },
+                        {
+                            text: "The audio advertising services are top-notch. Professional voice-overs, clear communication, and timely delivery. APS Advertising understands brand storytelling like no one else.",
+                            author: "Ms. Patel",
+                            title: "Brand Director",
+                            initials: "MP"
+                        },
+                        {
+                            text: "Our corporate video production exceeded expectations. The team was professional, creative, and delivered on time. Highly recommended for any video needs!",
+                            author: "Mr. Verma",
+                            title: "Marketing Director",
+                            initials: "MV"
+                        }
+                    ];
+
+                    const track = document.getElementById('testimonialsTrack');
+                    let currentSlide = 0;
+
+                    // Create slides
+                    testimonials.forEach((testimonial, index) => {
+                        const slide = document.createElement('div');
+                        slide.className = 'testimonial-slide';
+                        slide.setAttribute('role', 'tabpanel');
+
+                        slide.innerHTML = `
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">${testimonial.text}</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">${testimonial.initials}</div>
+                                    <div class="author-info">
+                                        <h4>${testimonial.author}</h4>
+                                        <div class="author-title">${testimonial.title}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+
+                        track.appendChild(slide);
+                    });
+
+                    // Navigation
+                    document.getElementById('prevTestimonial').addEventListener('click', () => {
+                        currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+                        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    });
+
+                    document.getElementById('nextTestimonial').addEventListener('click', () => {
+                        currentSlide = (currentSlide + 1) % testimonials.length;
+                        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    });
+
+                    // Auto-rotate every 8 seconds
+                    setInterval(() => {
+                        currentSlide = (currentSlide + 1) % testimonials.length;
+                        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    }, 8000);
+                }
+
+                initForm() {
+                    const form = document.getElementById('feedbackForm');
+                    const submitBtn = form.querySelector('.submit-btn');
+
+                    form.addEventListener('submit', async (e) => {
+                        e.preventDefault();
+
+                        if (!this.validateForm()) return;
+
+                        // Show loading state
+                        const originalText = submitBtn.innerHTML;
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Submitting...</span>';
+                        submitBtn.disabled = true;
+
+                        // Get form data
+                        const formData = {
+                            name: document.getElementById('name').value.trim(),
+                            email: document.getElementById('email').value.trim() || 'Anonymous',
+                            rating: document.querySelector('input[name="rating"]:checked')?.value || 5,
+                            service: document.getElementById('service').value,
+                            feedback: document.getElementById('feedback').value.trim()
+                        };
+
+                        // Save feedback
+                        await this.feedbackManager.save(formData);
+
+                        // Show success message
+                        this.showSuccessMessage();
+
+                        // Reset form
+                        form.reset();
+                        document.querySelectorAll('.service-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                            opt.setAttribute('aria-checked', 'false');
+                        });
+                        document.getElementById('ratingText').textContent = 'Select a rating';
+
+                        // Reload feedback display
+                        await this.loadFeedback();
+
+                        // Restore button
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    });
+                }
+
+                initEventListeners() {
+                    // Close success message
+                    document.querySelector('.close-success').addEventListener('click', () => {
+                        this.closeSuccessMessage();
+                    });
+
+                    // Scroll to form
+                    window.scrollToForm = () => {
+                        document.querySelector('.feedback-form-container').scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    };
+
+                    // Share feedback function
+                    window.shareFeedback = (name, text) => {
+                        const shareText = `${name}'s feedback about APS Advertising: "${text}"`;
+
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'APS Advertising Feedback',
+                                text: shareText,
+                                url: window.location.href
+                            });
+                        } else if (navigator.clipboard) {
+                            navigator.clipboard.writeText(shareText).then(() => {
+                                this.showNotification('Feedback copied to clipboard!');
+                            });
+                        } else {
+                            prompt('Copy this feedback:', shareText);
+                        }
+                    };
+
+                    // Toggle like function
+                    window.toggleLikeFeedback = async (id) => {
+                        await this.feedbackManager.toggleLike(id);
+                        await this.loadFeedback();
+                    };
+                }
+
+                async loadFeedback() {
+                    const feedback = await this.feedbackManager.load();
+
+                    // If no feedback exists, load sample data
+                    if (!feedback.length) {
+                        this.loadSampleData();
+                        return;
+                    }
+
+                    // Filter feedback
+                    let filtered = feedback;
+                    if (this.currentFilter !== 'all') {
+                        if (['5', '4', '3'].includes(this.currentFilter)) {
+                            filtered = feedback.filter(f => f.rating == this.currentFilter);
+                        } else {
+                            filtered = feedback.filter(f => f.service === this.currentFilter);
+                        }
+                    }
+
+                    // Render feedback cards
+                    this.renderFeedbackCards(filtered);
+
+                    // Update feedback count
+                    this.updateFeedbackCount(feedback.length);
+                }
+
+                renderFeedbackCards(feedback) {
+                    const container = document.getElementById('feedbackCards');
+
+                    if (!feedback.length) {
+                        container.innerHTML = `
+                            <div class="no-feedback">
+                                <i class="fas fa-comment-slash" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                                <p>No feedback available yet. Be the first to share your experience!</p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    const cards = feedback.map(f => this.createFeedbackCard(f)).join('');
+                    container.innerHTML = cards;
+                }
+
+                createFeedbackCard(feedback) {
+                    const stars = Array(5).fill(0).map((_, i) =>
+                        `<i class="fas fa-star rating-star ${i < feedback.rating ? '' : 'empty'}"></i>`
+                    ).join('');
+
+                    const serviceIcons = {
+                        audio: 'fa-microphone-alt',
+                        video: 'fa-video',
+                        political: 'fa-landmark',
+                        website: 'fa-laptop-code'
+                    };
+
+                    const initials = feedback.name
+                        .split(' ')
+                        .map(n => n[0])
+                        .join('')
+                        .toUpperCase()
+                        .slice(0, 2);
+
+                    return `
+                        <div class="feedback-card">
+                            <div class="card-header">
+                                <div class="user-info">
+                                    <div class="user-avatar">${initials}</div>
+                                    <div class="user-details">
+                                        <h4>${feedback.name}</h4>
+                                        <div class="user-service">
+                                            <i class="fas ${serviceIcons[feedback.service] || 'fa-star'}"></i>
+                                            <span>${feedback.service.charAt(0).toUpperCase() + feedback.service.slice(1)}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback-rating">
+                                    ${stars}
+                                </div>
+                            </div>
+                            <div class="feedback-content">
+                                <p class="feedback-text">${feedback.feedback}</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="feedback-date">${feedback.date}</div>
+                                <div class="feedback-actions">
+                                    <button class="action-btn ${feedback.liked ? 'liked' : ''}" 
+                                            onclick="toggleLikeFeedback(${feedback.id})"
+                                            aria-label="${feedback.liked ? 'Unlike' : 'Like'} this feedback">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span>${feedback.likes}</span>
+                                    </button>
+                                    <button class="action-btn" 
+                                            onclick="shareFeedback('${feedback.name}', '${feedback.feedback.replace(/'/g, "\\'")}')"
+                                            aria-label="Share this feedback">
+                                        <i class="fas fa-share"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                loadSampleData() {
+                    const sample = [
+                        {
+                            id: 1,
+                            name: "Rajesh Kumar",
+                            email: "rajesh@example.com",
+                            rating: 5,
+                            service: "political",
+                            feedback: "APS Advertising transformed our political campaign completely. Their creative strategies and timely execution helped us win the election. Highly recommended!",
+                            date: "Nov 15, 2024",
+                            likes: 24,
+                            liked: false
+                        },
+                        {
+                            id: 2,
+                            name: "Priya Sharma",
+                            email: "priya@example.com",
+                            rating: 5,
+                            service: "audio",
+                            feedback: "The voice-over services are exceptional. Professional quality, quick turnaround, and excellent customer support. Will definitely work with them again.",
+                            date: "Nov 12, 2024",
+                            likes: 18,
+                            liked: false
+                        },
+                        {
+                            id: 3,
+                            name: "Ankit Verma",
+                            email: "ankit@example.com",
+                            rating: 4,
+                            service: "video",
+                            feedback: "Great video production services. The team understood our requirements perfectly and delivered high-quality content. Minor delays but overall excellent experience.",
+                            date: "Nov 10, 2024",
+                            likes: 12,
+                            liked: false
+                        }
+                    ];
+
+                    StorageManager.set('apsFeedback', sample);
+                    this.loadFeedback();
+                }
+
+                validateForm() {
+                    const name = document.getElementById('name').value.trim();
+                    const rating = document.querySelector('input[name="rating"]:checked');
+                    const service = document.getElementById('service').value;
+                    const feedback = document.getElementById('feedback').value.trim();
+
+                    const errors = [];
+
+                    if (!name) errors.push('Please enter your name');
+                    if (!rating) errors.push('Please select a rating');
+                    if (!service) errors.push('Please select a service');
+                    if (!feedback) errors.push('Please enter your feedback');
+                    if (feedback && feedback.length < 10) {
+                        errors.push('Please provide more detailed feedback (minimum 10 characters)');
+                    }
+
+                    if (errors.length) {
+                        this.showError(errors[0]);
+                        return false;
+                    }
+
+                    return true;
+                }
+
+                showError(message) {
+                    // Remove existing error
+                    const existingError = document.querySelector('.error-message');
+                    if (existingError) existingError.remove();
+
+                    const error = document.createElement('div');
+                    error.className = 'error-message';
+                    error.innerHTML = `
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>${message}</span>
+                        <button onclick="this.parentElement.remove()">&times;</button>
+                    `;
+
+                    document.body.appendChild(error);
+
+                    setTimeout(() => {
+                        if (error.parentElement) error.remove();
+                    }, 5000);
+                }
+
+                showSuccessMessage() {
+                    const message = document.getElementById('successMessage');
+                    message.classList.add('active');
+
+                    setTimeout(() => {
+                        this.closeSuccessMessage();
+                    }, 5000);
+                }
+
+                closeSuccessMessage() {
+                    const message = document.getElementById('successMessage');
+                    message.classList.remove('active');
+                }
+
+                updateFeedbackCount(count) {
+                    const element = document.getElementById('totalFeedback');
+                    if (element) {
+                        element.textContent = `${count}+`;
+                    }
+                }
+
+                showNotification(message) {
+                    const notification = document.createElement('div');
+                    notification.className = 'notification';
+                    notification.textContent = message;
+                    notification.style.cssText = `
+                        position: fixed;
+                        bottom: 30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: var(--primary-red);
+                        color: white;
+                        padding: 12px 24px;
+                        border-radius: 8px;
+                        z-index: 10000;
+                        animation: fadeInUp 0.3s ease;
+                    `;
+
+                    document.body.appendChild(notification);
+
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 3000);
+                }
+
+                hideLoading() {
+                    setTimeout(() => {
+                        document.body.classList.add('loaded');
+                        const overlay = document.getElementById('loadingOverlay');
+                        if (overlay) {
+                            overlay.style.opacity = '0';
+                            setTimeout(() => {
+                                overlay.style.display = 'none';
+                            }, 500);
+                        }
+                    }, 1000);
+                }
+            }
+
+            // ===== INITIALIZE APPLICATION =====
+            document.addEventListener('DOMContentLoaded', () => {
+                const app = new UIManager();
+                app.init();
+
+                // Error handling
+                window.addEventListener('error', (e) => {
+                    console.error('Error:', e.error);
+                });
+
+                window.addEventListener('unhandledrejection', (e) => {
+                    console.error('Unhandled rejection:', e.reason);
+                });
+            });
+        })();
+
+        // In your frontend JS files (like demos.html), add this:
+        const API_BASE_URL = window.location.hostname === 'localhost'
+            ? 'http://localhost:5000/api'
+            : '/api'; // Use relative path for production
+    </script>
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/917355576785?text=Hello%20APS%20Advertising,%20I'm%20interested%20in%20your%20services.%20Can%20you%20tell%20me%20more%20about%20your%20advertising%20solutions?"
+        class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+</body>
+
+</html>

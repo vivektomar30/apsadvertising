@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | APS Advertising - Audio, Video & Advertising Demos</title>
+    <link rel="icon" type="image/png" href="img/APS Advertising Logo (1).png">
+    <link rel="canonical" href="https://apsadvertise.com/our-services.html">
+    <meta name="description" content="Explore APS Advertising services - Education, Healthcare, Election, Business ads, Male/Female/Dual audio demos, Festival announcements. Professional advertising solutions across India.">
+    <meta name="keywords" content="advertising services India, education ads, healthcare ads, election campaign, business ads, male voice, female voice, dual audio, festival ads">
+    <meta name="author" content="APS Advertising">
+    <script src="js/language-toggle.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-red: #D2042D;
+            --accent-red: #FF3366;
+            --primary-black: #000000;
+            --dark-grey: #0A0A0A;
+            --medium-grey: #1A1A1A;
+            --light-grey: #333333;
+            --pure-white: #FFFFFF;
+        }
+        body { font-family: 'Poppins', sans-serif; background: var(--primary-black); color: var(--pure-white); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+
+        /* Top bar & Nav - matches APS pages */
+        .top-bar {
+            background: var(--dark-grey);
+            padding: 8px 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .contact-top { display: flex; gap: 20px; flex-wrap: wrap; }
+        .contact-top a { color: rgba(255,255,255,0.9); font-size: 0.9rem; text-decoration: none; }
+        .contact-top a:hover { color: var(--primary-red); }
+        .top-actions { display: flex; gap: 12px; }
+        .top-btn { padding: 8px 18px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: 0.3s; }
+        .chat-btn { background: #25D366; color: white; }
+        .chat-btn:hover { background: #1da851; transform: translateY(-2px); }
+        .book-btn { background: var(--primary-red); color: white; }
+        .book-btn:hover { background: var(--accent-red); transform: translateY(-2px); }
+
+        .navbar {
+            background: var(--primary-black);
+            padding: 12px 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        .nav-left-group { display: flex; align-items: center; gap: 12px; }
+        .home-arrow { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; }
+        .home-arrow:hover { background: var(--primary-red); color: white; }
+        .logo-container { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-img { height: 42px; width: 42px; object-fit: cover; border-radius: 50%; border: 2px solid var(--primary-red); }
+        .logo-text { font-size: 1.4rem; font-weight: 700; color: var(--pure-white); }
+        .logo-text span { color: var(--primary-red); }
+        .nav-right { display: flex; align-items: center; gap: 12px; }
+        .mobile-menu-btn { background: transparent; border: none; color: white; font-size: 1.4rem; cursor: pointer; padding: 8px; }
+
+        /* Hero - half cover like Flowrush */
+        .services-hero {
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(210,4,45,0.15) 0%, rgba(0,0,0,0.9) 50%), url('img/about studio.png') center/cover no-repeat;
+            text-align: center;
+            padding: 60px 4%;
+        }
+        .services-hero-content { max-width: 800px; }
+        .services-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--pure-white);
+            margin-bottom: 16px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        .services-hero p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 12px 4%;
+            background: var(--dark-grey);
+            border-bottom: 1px solid var(--light-grey);
+        }
+        .breadcrumbs-container { max-width: 1200px; margin: 0 auto; }
+        .breadcrumbs-list { display: flex; align-items: center; gap: 8px; list-style: none; flex-wrap: wrap; }
+        .breadcrumbs-list li { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .breadcrumbs-list a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .breadcrumbs-list a:hover { color: var(--primary-red); }
+        .breadcrumbs-list i { color: var(--primary-red); font-size: 0.7rem; }
+        .breadcrumbs-list li:last-child { color: var(--primary-red); font-weight: 600; }
+
+        /* Core Services - Flowrush style */
+        .core-services {
+            padding: 50px 4% 70px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .core-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--pure-white);
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        .core-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-red);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        .category-section {
+            margin-bottom: 45px;
+        }
+        .category-heading {
+            font-size: 1.3rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(210,4,45,0.3);
+            display: inline-block;
+        }
+        .service-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        .service-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 22px;
+            background: rgba(26,26,26,0.95);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.08);
+            text-decoration: none;
+            color: var(--pure-white);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-red);
+            box-shadow: 0 12px 30px rgba(210,4,45,0.2);
+        }
+        .service-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(210,4,45,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--primary-red);
+            flex-shrink: 0;
+        }
+        .service-card-text {
+            flex: 1;
+        }
+        .service-card-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
+        .service-card-desc { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+
+        /* Footer */
+        footer {
+            background: var(--dark-grey);
+            padding: 40px 4% 20px;
+            border-top: 1px solid var(--light-grey);
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-section h3 { color: white; margin-bottom: 15px; font-size: 1.1rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section li { margin-bottom: 10px; }
+        .footer-section a { color: rgba(255,255,255,0.8); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .footer-section a:hover { color: var(--primary-red); }
+        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid var(--light-grey); color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .copyright a { color: var(--primary-red); }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            .services-hero h1 { font-size: 2rem; }
+            .service-cards-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="top-bar">
+        <div class="contact-top">
+            <a href="mailto:apsadvertisingpr@gmail.com"><i class="fas fa-envelope"></i> apsadvertisingpr@gmail.com</a>
+            <a href="tel:7355576785"><i class="fas fa-phone"></i> 7355576785</a>
+        </div>
+        <div class="top-actions">
+            <a href="https://wa.me/917355576785" class="top-btn chat-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="Chat with Us" data-hi="चैट करें">Chat with Us</span></a>
+            <a href="contact.html" class="top-btn book-btn"><i class="fas fa-calendar-check"></i> <span data-en="Book Your Ads" data-hi="बुक करें">Book Your Ads</span></a>
+        </div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-left-group">
+            <a href="index.html" class="home-arrow" aria-label="Home"><i class="fas fa-arrow-left"></i></a>
+            <a href="index.html" class="logo-container">
+                <img src="img/APS Advertising Logo (1).png" alt="APS Logo" class="logo-img">
+                <div class="logo-text">APS <span>Advertising</span></div>
+            </a>
+        </div>
+        <div class="nav-right">
+            <div class="aps-lang-toggle-container" aria-label="Language switcher"></div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3 class="mobile-menu-title" data-en="All Pages" data-hi="सभी पेज">All Pages</h3>
+            <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="aps-lang-toggle-container mobile" data-variant="mobile"></div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" data-en="Home" data-hi="होम">Home</a></li>
+            <li><a href="our-services.html" style="color: var(--primary-red);" data-en="Our Services" data-hi="हमारी सेवाएं">Our Services</a></li>
+            <li><a href="wwf.html" data-en="What We Offer" data-hi="हम क्या प्रदान करते हैं">What We Offer</a></li>
+            <li><a href="demos.html" data-en="How We Work" data-hi="हम कैसे काम करते हैं">How We Work</a></li>
+            <li><a href="about.html" data-en="Who We Are" data-hi="हमारे बारे में">Who We Are</a></li>
+            <li><a href="WeddingAds-and-Invitation-Videos.html" data-en="Wedding Ads" data-hi="वेडिंग एड्स">Wedding Ads</a></li>
+            <li><a href="SchoolAdvertisement.html" data-en="School Advertisement" data-hi="स्कूल विज्ञापन">School Advertisement</a></li>
+            <li><a href="partners.html" data-en="Partners" data-hi="साझेदार">Partners</a></li>
+            <li><a href="contact.html" data-en="Contact" data-hi="संपर्क">Contact</a></li>
+            <li><a href="feedback.html" data-en="Feedback" data-hi="राय">Feedback</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="services-hero-content">
+            <h1 data-en="Our Services" data-hi="हमारी सेवाएं">Our Services</h1>
+            <p data-en="APS Advertising offers professional audio and video advertising solutions across India. From school admission ads to election campaigns, healthcare announcements to festival promos — explore our demos by category and find the perfect fit for your brand." data-hi="APS Advertising पूरे भारत में प्रोफेशनल ऑडियो और वीडियो विज्ञापन सेवाएं देती है। स्कूल विज्ञापन से चुनाव प्रचार, अस्पताल घोषणाओं से त्योहार प्रमोशन तक — अपनी श्रेणी के हिसाब से डेमो देखें।">APS Advertising offers professional audio and video advertising solutions across India. From school admission ads to election campaigns, healthcare announcements to festival promos — explore our demos by category and find the perfect fit for your brand.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+            <ul class="breadcrumbs-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> <span data-en="Home" data-hi="होम">Home</span></a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><span data-en="Our Services" data-hi="हमारी सेवाएं">Our Services</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Core Services - Category Cards -->
+    <main class="core-services">
+        <h2 class="core-title" data-en="Core Services" data-hi="मुख्य सेवाएं">Core Services</h2>
+
+        <!-- Content Demos -->
+        <div class="category-section">
+            <h3 class="category-heading" data-en="Content Demos" data-hi="कंटेंट डेमो">Content Demos</h3>
+            <div class="service-cards-grid">
+                <a href="education-demos.html" class="service-card">
+                    <div class="service-card-icon"><i class="fas fa-school"></i></div>
+                    <div class="service-card-text">
+                        <div class="service-card-title" data-en="Education" data-hi="शिक्षा">Education</div>
+                        <div class="service-card-desc" data-en="School, academy & institute ads" data-hi="स्कूल, एकेडमी विज्ञापन">School, academy & institute ads</div>
+                    </div>
+                </a>
+                <a href="healthcare-demos.html" class="service-card">
+                    <div class="service-card-icon"><i class="fas fa-hospital"></i></div>
+                    <div class="service-card-text">
+                        <div class="service-card-title" data-en="Healthcare" data-hi="स्वास्थ्य">Healthcare</div>
+                        <div class="service-card-desc" data-en="Hospital, clinic & medical ads" data-hi="अस्पताल, क्लिनिक विज्ञापन">Hospital, clinic & medical ads</div>
+                    </div>
+                </a>
+                <a href="election-demos.html" class="service-card">
+                    <div class="service-card-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="service-card-text">
+                        <div class="service-card-title" data-en="Election" data-hi="चुनाव">Election</div>
+                        <div class="service-card-desc" data-en="Chunav prachar & political ads" data-hi="चुनाव प्रचार विज्ञापन">Chunav prachar & political ads</div>
+                    </div>
+                </a>
+                <a href="business-demos.html" class="service-card">
+                    <div class="service-card-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="service-card-text">
+                        <div class="service-card-title" data-en="Business" data-hi="व्यवसाय">Business</div>
+                        <div class="service-card-desc" data-en="Shop, retail & commercial ads" data-hi="दुकान, रिटेल विज्ञापन">Shop, retail & commercial ads</div>
+                    </div>
+                </a>
+                <a href="festival-demos.html" class="service-card">
+                    <div class="service-card-icon"><i class="fas fa-moon"></i></div>
+                    <div class="service-card-text">
+                        <div class="service-card-title" data-en="Festival" data-hi="त्योहार">Festival</div>
+                        <div class="service-card-desc" data-en="Religious & festival announcements" data-hi="धार्मिक और त्योहार विज्ञापन">Religious & festival announcements</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Audio Demos - Male, Female, Dual -->
+        <div class="category-section">
+            <h3 class="category-heading" data-en="Audio Demos" data-hi="ऑडियो डेमो">Audio Demos</h3>
+            <div class="service-cards-grid">
+                <a href="male-audio-demos.html" class="service-card">
+                    <div class="service-card-icon"><i class="fas fa-male"></i></div>
+                    <div class="service-card-text">
+                        <div class="service-card-title" data-en="Male Voice" data-hi="पुरुष आवाज">Male Voice</div>
+                        <div class="service-card-desc" data-en="Professional male voice recordings" data-hi="प्रोफेशनल पुरुष आवाज">Professional male voice recordings</div>
+                    </div>
+                </a>
+                <a href="female-audio-demos.html" class="service-card">
+                    <div class="service-card-icon"><i class="fas fa-female"></i></div>
+                    <div class="service-card-text">
+                        <div class="service-card-title" data-en="Female Voice" data-hi="महिला आवाज">Female Voice</div>
+                        <div class="service-card-desc" data-en="Professional female voice recordings" data-hi="प्रोफेशनल महिला आवाज">Professional female voice recordings</div>
+                    </div>
+                </a>
+                <a href="dual-audio-demos.html" class="service-card">
+                    <div class="service-card-icon"><i class="fas fa-users"></i></div>
+                    <div class="service-card-text">
+                        <div class="service-card-title" data-en="Dual Audio" data-hi="दोहरी आवाज">Dual Audio</div>
+                        <div class="service-card-desc" data-en="Male + Female mix voice ads" data-hi="पुरुष + महिला मिक्स विज्ञापन">Male + Female mix voice ads</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="Quick Links" data-hi="जल्दी लिंक">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> <span data-en="Home" data-hi="होम">Home</span></a></li>
+                    <li><a href="our-services.html"><i class="fas fa-th-large"></i> <span data-en="Our Services" data-hi="हमारी सेवाएं">Our Services</span></a></li>
+                    <li><a href="demos.html"><i class="fas fa-play-circle"></i> <span data-en="How We Work" data-hi="हम कैसे काम करते हैं">How We Work</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span data-en="Contact" data-hi="संपर्क">Contact</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Contact" data-hi="संपर्क">Contact</h3>
+                <ul>
+                    <li><a href="tel:7355576785"><i class="fas fa-phone"></i> 7355576785</a></li>
+                    <li><a href="mailto:apsadvertisingpr@gmail.com"><i class="fas fa-envelope"></i> apsadvertisingpr@gmail.com</a></li>
+                    <li><a href="https://wa.me/917355576785"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 APS Advertising. <span data-en="All Rights Reserved" data-hi="सर्वाधिकार सुरक्षित">All Rights Reserved</span></p>
+            <p><span data-en="Website by" data-hi="वेबसाइट">Website by</span> <a href="shivangi-chauhan.html" target="_blank">Shivangi Chauhan</a></p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917355576785?text=Hello%20APS%20Advertising" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearEl = document.querySelector('.copyright p');
+            if (yearEl) yearEl.innerHTML = yearEl.innerHTML.replace('2024', new Date().getFullYear());
+        });
+    </script>
+</body>
+</html>

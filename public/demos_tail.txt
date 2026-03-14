@@ -1,0 +1,471 @@
+        ];
+
+        // Global variables
+        let currentCategory = 'all';
+        let currentSearch = '';
+        let displayedItems = 12; // Increased initial items
+        let filteredItems = [...allMediaItems];
+        let activeAudio = null;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function () {
+            loadItems();
+            setupEventListeners();
+            updateResultsCount();
+        });
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Search on Enter key
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+
+                // Auto-search after typing delay
+                let searchTimeout;
+                searchInput.addEventListener('input', function () {
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(() => {
+                        if (this.value.trim() === '') {
+                            currentSearch = '';
+                            filterItems();
+                        } else {
+                            performSearch();
+                        }
+                    }, 500);
+                });
+            }
+        }
+
+        // Load items with visibility fixes
+        function loadItems() {
+            const grid = document.getElementById('portfolioGrid');
+            if (!grid) return;
+
+            grid.innerHTML = '';
+
+            const itemsToShow = filteredItems.slice(0, displayedItems);
+
+            if (itemsToShow.length === 0) {
+                showNoResults();
+                return;
+            }
+
+            itemsToShow.forEach(item => {
+                const card = createMediaCard(item);
+                grid.appendChild(card);
+            });
+
+            updateResultsCount();
+            updateLoadMoreButton();
+
+            // Initialize audio players
+            initializeAudioPlayers();
+        }
+
+        // Create media card with visibility fixes
+        function createMediaCard(item) {
+            const div = document.createElement('div');
+            div.className = 'media-card';
+
+            if (item.type === 'video') {
+                div.innerHTML = `
+                    <div class="media-container" onclick="openVideoModal('${item.videoUrl}', '${item.title}')">
+                        <img src="${item.thumbnail}" alt="${item.title}" class="video-thumbnail" loading="lazy">
+                        <div class="play-overlay">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">${item.title}</h3>
+                        <p class="media-description">${item.description}</p>
+                        <div class="media-tags">
+                            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                        <div class="media-actions">
+                            <a href="https://wa.me/917355576785?text=I'm interested in ${encodeURIComponent(item.title)} video advertisement" 
+                               class="action-btn book-btn" target="_blank">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Book This Ad</span>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                div.innerHTML = `
+                    <div class="media-container" onclick="playAudio(this, '${item.audioUrl}', ${item.id})">
+                        <div class="audio-visual">
+                            <i class="${item.category === 'male' ? 'fas fa-male' :
+                        item.category === 'female' ? 'fas fa-female' : 'fas fa-users'}"></i>
+                            <div class="play-overlay">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">${item.title}</h3>
+                        <p class="media-description">${item.description}</p>
+                        <div class="media-tags">
+                            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                        <audio id="audio-${item.id}" class="hidden-audio" preload="metadata">
+                            <source src="${item.audioUrl}" type="audio/mpeg">
+                        </audio>
+                        <div class="media-actions">
+                            <a href="https://wa.me/917355576785?text=I'm interested in ${encodeURIComponent(item.title)} voice recording" 
+                               class="action-btn book-btn" target="_blank">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Book Recording</span>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }
+
+            return div;
+        }
+
+        // Smart search function
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            currentSearch = searchTerm;
+
+            if (searchTerm === '') {
+                filterItems();
+                return;
+            }
+
+            // Smart search algorithm
+            const searchWords = searchTerm.split(' ').filter(word => word.length > 1);
+
+            // Score items based on relevance
+            const scoredItems = allMediaItems.map(item => {
+                let score = 0;
+
+                // Restrict search scope if category filter is active
+                // Ensure text search respects the category filter if it's not 'all'
+                if (currentCategory !== 'all') {
+                    // If current category is 'video', skip audio
+                    if (currentCategory === 'video' && item.type !== 'video') return { item, score: 0 };
+                    // If current category is 'audio', skip video
+                    if (currentCategory === 'audio' && item.type !== 'audio') return { item, score: 0 };
+                    // If category is specific (e.g. 'business'), match exact category
+                    if (currentCategory !== 'video' && currentCategory !== 'audio' && item.category !== currentCategory) return { item, score: 0 };
+                }
+
+                // Combine searchable text
+                const searchableText = [
+                    item.title,
+                    item.description,
+                    ...item.tags,
+                    item.type,
+                    item.category
+                ].join(' ').toLowerCase();
+
+                // Exact phrase match
+                if (searchableText.includes(searchTerm)) {
+                    score += 100;
+                }
+
+                // Individual word matches
+                searchWords.forEach(word => {
+                    if (searchableText.includes(word)) {
+                        score += 50;
+                    }
+                    if (item.title.toLowerCase().includes(word)) {
+                        score += 30;
+                    }
+                    if (item.tags.some(tag => tag.toLowerCase().includes(word))) {
+                        score += 20;
+                    }
+                });
+
+                return { item, score };
+            });
+
+            // Filter and sort by score
+            const relevantItems = scoredItems
+                .filter(scored => scored.score > 0)
+                .sort((a, b) => b.score - a.score)
+                .map(scored => scored.item);
+
+            // If we have results
+            if (relevantItems.length > 0) {
+                filteredItems = relevantItems;
+                displayedItems = 12;
+
+                // Show smart notice
+                showSmartNotice(`Found ${relevantItems.length} result${relevantItems.length !== 1 ? 's' : ''} for "${searchTerm}"`);
+            } else {
+                // No direct matches - show related content
+                showRelatedContent(searchTerm);
+            }
+
+            loadItems();
+        }
+
+        // Show related content when no direct matches
+        function showRelatedContent(searchTerm) {
+            // ... (keep logic but ensure it respect currentCategory if we want strictness, 
+            // but usually related content implies broadening search. 
+            // For now, let's keep related content reasonably broad but distinct)
+
+            // Fallback logic for related content
+            // We will do a looser match
+            const relatedItems = allMediaItems.filter(item => {
+                // Determine if item matches looser criteria
+                const matches = item.tags.some(tag => searchTerm.includes(tag)) ||
+                    item.description.toLowerCase().includes(searchTerm);
+                return matches;
+            });
+
+            if (relatedItems.length > 0) {
+                filteredItems = relatedItems;
+                showSmartNotice(`Showing related content for "${searchTerm}"`);
+            } else {
+                // Absolute fallback: Random suggestions
+                const trendingItems = allMediaItems
+                    .sort(() => Math.random() - 0.5)
+                    .slice(0, 9);
+
+                filteredItems = trendingItems;
+                showSmartNotice(`No exact matches found for "${searchTerm}". Showing popular advertisements instead.`);
+            }
+
+            displayedItems = 12;
+            loadItems();
+        }
+
+        // Filter by category - STRICT LOGIC
+        function filterByCategory(category) {
+            currentCategory = category;
+
+            // Update active filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            filterItems();
+        }
+
+        // Filter items
+        function filterItems() {
+            filteredItems = allMediaItems.filter(item => {
+                // STRICT TYPE FILTERING
+                if (currentCategory === 'video') {
+                    if (item.type !== 'video') return false;
+                }
+                else if (currentCategory === 'audio') {
+                    if (item.type !== 'audio') return false;
+                }
+                // Specific category filtering
+                else if (currentCategory !== 'all' && item.category !== currentCategory) {
+                    return false;
+                }
+
+                if (currentSearch) {
+                    const searchText = (item.title + ' ' + item.description + ' ' + item.tags.join(' ')).toLowerCase();
+                    return searchText.includes(currentSearch);
+                }
+
+                return true;
+            });
+
+            displayedItems = 12; // Reset displayed count
+            loadItems();
+
+            // Hide smart notice when showing all items
+            if (currentCategory === 'all' && !currentSearch) {
+                hideSmartNotice();
+            }
+        }
+
+        // Show smart notice
+        function showSmartNotice(message) {
+            const notice = document.getElementById('smartNotice');
+            const noticeText = document.getElementById('noticeText');
+            if (notice && noticeText) {
+                noticeText.textContent = message;
+                notice.style.display = 'flex';
+                setTimeout(() => {
+                    notice.style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        // Hide smart notice
+        function hideSmartNotice() {
+            const notice = document.getElementById('smartNotice');
+            if (notice) notice.style.display = 'none';
+        }
+
+        // Show no results state
+        function showNoResults() {
+            const grid = document.getElementById('portfolioGrid');
+
+            grid.innerHTML = `
+                <div class="no-results">
+                    <i class="fas fa-search"></i>
+                    <h3>No results found</h3>
+                    <p>Try different keywords or browse our popular categories</p>
+                    <div class="suggestions">
+                        <span class="suggestion-tag" onclick="searchBySuggestion('business')">Business Ads</span>
+                        <span class="suggestion-tag" onclick="searchBySuggestion('festival')">Festival Ads</span>
+                        <span class="suggestion-tag" onclick="searchBySuggestion('voice')">Voice Recording</span>
+                        <span class="suggestion-tag" onclick="searchBySuggestion('male')">Male Voice</span>
+                        <span class="suggestion-tag" onclick="searchBySuggestion('female')">Female Voice</span>
+                    </div>
+                </div>
+            `;
+
+            updateResultsCount();
+            document.getElementById('loadMoreBtn').style.display = 'none';
+        }
+
+        // Search by suggestion
+        function searchBySuggestion(term) {
+            document.getElementById('searchInput').value = term;
+            performSearch();
+        }
+
+        // Load more items
+        function loadMoreItems() {
+            displayedItems += 9;
+            loadItems();
+        }
+
+        // Update results count
+        function updateResultsCount() {
+            const countElement = document.getElementById('resultsCount');
+            const totalCount = filteredItems.length;
+            const showingCount = Math.min(displayedItems, totalCount);
+
+            countElement.textContent = `${showingCount} of ${totalCount} items`;
+        }
+
+        // Update load more button
+        function updateLoadMoreButton() {
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            loadMoreBtn.style.display = displayedItems < filteredItems.length ? 'flex' : 'none';
+        }
+
+        // Initialize audio players
+        function initializeAudioPlayers() {
+            // Audio elements are already in the DOM
+            // This function can be used for additional audio setup if needed
+        }
+
+        // Play audio with mobile compatibility
+        function playAudio(element, audioUrl, audioId) {
+            const audioElement = document.getElementById(`audio-${audioId}`);
+            const playIcon = element.querySelector('.play-btn i');
+
+            // Stop any currently playing audio
+            if (activeAudio && activeAudio !== audioElement) {
+                activeAudio.pause();
+                activeAudio.currentTime = 0;
+                const activePlayIcon = document.querySelector('.play-btn i.fa-pause');
+                if (activePlayIcon) activePlayIcon.className = 'fas fa-play';
+            }
+
+            if (audioElement.paused) {
+                // Mobile compatibility
+                const playPromise = audioElement.play();
+
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        playIcon.className = 'fas fa-pause';
+                        activeAudio = audioElement;
+
+                        // Update progress (optional enhancement)
+                        audioElement.addEventListener('timeupdate', function () {
+                            // You can add a progress bar here if needed
+                        });
+
+                        // Reset when audio ends
+                        audioElement.addEventListener('ended', function () {
+                            playIcon.className = 'fas fa-play';
+                            activeAudio = null;
+                        });
+                    }).catch(error => {
+                        console.log("Audio playback error:", error);
+                        // User-friendly fallback
+                        playIcon.className = 'fas fa-play';
+
+                        // For mobile browsers that block autoplay
+                        if (error.name === 'NotAllowedError') {
+                            alert("Please tap the play button again to start audio playback.");
+                        }
+                    });
+                }
+            } else {
+                audioElement.pause();
+                playIcon.className = 'fas fa-play';
+                activeAudio = null;
+            }
+        }
+
+        // Open video modal
+        function openVideoModal(videoUrl, title) {
+            const modal = document.getElementById('portfolioModal');
+            const iframe = document.getElementById('modalVideo');
+
+            // Convert YouTube URL to embed format
+            let embedUrl = videoUrl;
+            if (videoUrl.includes('youtu.be/')) {
+                const videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
+                embedUrl = `https://www.youtube.com/embed/${videoId}`;
+            } else if (videoUrl.includes('watch?v=')) {
+                const videoId = videoUrl.split('watch?v=')[1].split('&')[0];
+                embedUrl = `https://www.youtube.com/embed/${videoId}`;
+            }
+
+            // Add autoplay and other parameters
+            embedUrl += (embedUrl.includes('?') ? '&' : '?') + 'autoplay=1&rel=0&modestbranding=1&controls=1';
+
+            iframe.src = embedUrl;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal() {
+            const modal = document.getElementById('portfolioModal');
+            const iframe = document.getElementById('modalVideo');
+
+            iframe.src = '';
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('portfolioModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Initialize on load
+        window.onload = function () {
+            loadItems();
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+/**
+ * APS Advertising - Shared Styles
+ * Uniform header, footer, fonts, colors across all pages
+ */
+:root {
+    --primary-red: #D2042D;
+    --accent-red: #FF3366;
+    --brand-red: #C00000;
+    --primary-black: #000000;
+    --dark-grey: #0A0A0A;
+    --medium-grey: #1A1A1A;
+    --light-grey: #333333;
+    --off-white: #F5F5F5;
+    --pure-white: #FFFFFF;
+    /* Typography */
+    --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Montserrat', 'Poppins', sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 0.9rem;
+    --font-size-lg: 1.1rem;
+    --line-height: 1.6;
+}
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    background-color: var(--primary-black);
+    color: var(--pure-white);
+    line-height: var(--line-height);
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+/* Unified Header - white arrow left of logo, logo-text hidden on mobile */
+.logo-container {
+    text-decoration: none;
+}
+.home-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    color: var(--pure-white);
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+.home-arrow:hover {
+    color: var(--primary-red);
+    background: rgba(255,255,255,0.1);
+}
+.home-arrow i {
+    font-size: 1rem;
+}
+@media (max-width: 768px) {
+    .logo-text {
+        display: none !important;
+    }
+}
+
+/* Homepage-style Header - Top Bar */
+.top-bar {
+    background: var(--primary-black);
+    padding: 10px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--light-grey);
+    position: relative;
+    z-index: 1001;
+}
+.contact-top { display: flex; gap: 15px; align-items: center; }
+.contact-top a {
+    display: flex; align-items: center; gap: 6px;
+    padding: 5px 10px; border-radius: 6px;
+    background: rgba(255,255,255,0.05); color: var(--pure-white);
+    text-decoration: none; transition: all 0.3s ease; border: 1px solid transparent;
+}
+.contact-top a:hover { background: rgba(210,4,45,0.1); border-color: var(--primary-red); }
+.contact-top i { color: var(--primary-red); font-size: 0.9rem; }
+.top-actions { display: flex; align-items: center; gap: 10px; }
+.top-btn {
+    padding: 8px 16px; border-radius: 25px; font-weight: 600; cursor: pointer;
+    display: flex; align-items: center; gap: 6px; transition: all 0.3s ease;
+    text-decoration: none; font-size: 0.85rem; border: 2px solid transparent;
+}
+.top-btn.chat-btn { background: var(--pure-white); color: var(--primary-black); }
+.top-btn.chat-btn:hover { background: var(--primary-red); color: var(--pure-white); }
+.top-btn.book-btn { background: transparent; color: var(--pure-white); border-color: var(--primary-red); }
+.top-btn.book-btn:hover { background: var(--primary-red); color: var(--pure-white); }
+
+/* Navbar */
+.aps-header .navbar,
+body .navbar {
+    background-color: var(--primary-black);
+    padding: 12px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--light-grey);
+    transition: all 0.3s ease;
+}
+.nav-left-group { display: flex; align-items: center; gap: 12px; }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.logo-container { display: flex; align-items: center; gap: 10px; color: var(--pure-white); }
+.logo-img { height: 45px; width: 45px; object-fit: cover; border-radius: 50%; border: 2px solid var(--primary-red); }
+.logo-text { font-size: 1.5rem; font-weight: 800; color: var(--pure-white); letter-spacing: 0.5px; }
+.logo-text span { color: var(--primary-red); }
+.mobile-menu-btn {
+    background: none; border: none; color: var(--pure-white) !important; font-size: 1.5rem;
+    cursor: pointer; padding: 6px 10px; border-radius: 6px; transition: all 0.3s ease;
+    display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;
+}
+.mobile-menu-btn:hover { background: rgba(255,255,255,0.1); transform: scale(1.1); }
+
+/* Mobile Menu */
+.menu-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); z-index: 9999; display: none; backdrop-filter: blur(3px);
+}
+.menu-overlay.active { display: block; }
+.mobile-menu {
+    position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+    background: rgba(0,0,0,0.98); z-index: 10000; display: flex; flex-direction: column;
+    padding: 70px 20px 30px; backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255,255,255,0.1);
+    box-shadow: -5px 0 30px rgba(0,0,0,0.5); transition: right 0.3s ease-out; overflow-y: auto;
+}
+.mobile-menu.active { right: 0; }
+body.menu-open { overflow: hidden; position: fixed; width: 100%; height: 100%; }
+.mobile-menu-header {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+    padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: absolute; top: 15px; left: 20px; right: 20px;
+}
+.mobile-menu-title { color: var(--pure-white); font-size: 1.2rem; font-weight: 600; margin: 0; }
+.mobile-menu-close {
+    background: none; border: none; color: var(--primary-red); font-size: 1.3rem;
+    cursor: pointer; width: 35px; height: 35px;
+    display: flex; align-items: center; justify-content: center; border-radius: 50%;
+}
+.mobile-nav-links { list-style: none; margin: 0; padding: 0; }
+.mobile-nav-links li { margin: 0; }
+.mobile-nav-links a {
+    display: block; color: var(--pure-white); text-decoration: none; padding: 12px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.08); transition: all 0.3s;
+}
+.mobile-nav-links a:hover { color: var(--primary-red); padding-left: 15px; }
+
+.navbar.scrolled {
+    padding: 6px 4%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Top bar mobile */
+@media (max-width: 768px) {
+    .top-bar { flex-direction: row; gap: 8px; padding: 6px 4%; justify-content: space-between; }
+    .contact-top a:first-child { display: none !important; }
+    .top-actions .book-btn { display: none !important; }
+    .top-btn.chat-btn { padding: 5px 10px; font-size: 0.75rem; }
+    .contact-top a { padding: 4px 8px; font-size: 0.75rem; }
+    .navbar { padding: 8px 4%; }
+}
